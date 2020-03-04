@@ -40,33 +40,28 @@ int main(int argc,char*argv[])
         TokenType type=(TokenType)yylex();
         if (type == Space)
         {
-            cout<<"space"<<endl;
             continue;
         }
         else if(type == Int)
         {
-            cout<<"Int"<<endl;
             string num = to_string(yylval.numberValue);
             histogram.insert({num,Int});
         }
         else if(type == Main)
         {
-            cout<<"Main"<<endl;
             histogram.insert({*yylval.wordValue,Main});
         }
         else if(type == Void)
         {
-            cout<<"Void"<<endl;
             histogram.insert({*yylval.wordValue,Void});
         }
         else if(type == Return)
         {
-            cout<<"Return"<<endl;
             histogram.insert({*yylval.wordValue,Return});
+            break;
         }
         else if(type == If)
         {
-            cout<<"If"<<endl;
             cout<<yylval.wordValue<<endl;
             histogram.insert({*yylval.wordValue,If});
         }
@@ -74,14 +69,16 @@ int main(int argc,char*argv[])
         {
             histogram.insert({*yylval.wordValue,Id});
         }
-        else
+        else if(type == None)
         {
             cout<<"nothing"<<endl;
             //do nothing
+            break;
         }
         
         
     }//end of while
+    
     
     // 打印出词法分析之后的tokens 
     for(auto p:histogram)

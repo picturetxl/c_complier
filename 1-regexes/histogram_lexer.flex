@@ -25,13 +25,13 @@ ID          [_a-zA-Z][0-9_a-zA-Z]*
 %%
 
 {SPACE}     {return Space;}
-{INT}       {return Int;}
-{MAIN}      {return Main;}
-{VOID}      {return Void;}
-{RETURN}    {return Return;}
-{IF}        {return If;}
-{ID}        {return Id;}
-
+{INT}       { yylval.numberValue = strtod(yytext,0);return Int;}
+{MAIN}      { yylval.wordValue = new std::string(yytext);return Main;}
+{VOID}      { yylval.wordValue = new std::string(yytext);return Void;}
+{RETURN}    { yylval.wordValue = new std::string(yytext);return Return;}
+{IF}        { yylval.wordValue = new std::string(yytext);return If;}
+{ID}        { yylval.wordValue = new std::string(yytext);return Id;}
+.           {}
 
 %%
 

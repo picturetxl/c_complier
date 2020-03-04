@@ -13,6 +13,7 @@ enum TokenType{
     Return = 4,     //return 关键字
     If = 5,         //if 关键字
     Id = 6,         //标识符
+    None
 };
 
 //标识符string 或者 具体的数double
