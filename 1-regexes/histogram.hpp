@@ -23,8 +23,8 @@ union TokenValue{
 };
 
 
-extern FILE* yyin;
-extern TokenValue yylval;
+extern FILE* yyin;//如果不指定,那么flex默认从标准输入读
+extern TokenValue yylval;//全局的变量
 extern int yylex();
 
 

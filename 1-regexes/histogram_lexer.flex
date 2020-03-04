@@ -3,8 +3,6 @@
 %{
 #include "histogram.hpp"
 
-
-
 // This is to work around an irritating bug in Flex
 // https://stackoverflow.com/questions/46213840/get-rid-of-warning-implicit-declaration-of-function-fileno-in-flex
 extern "C" int fileno(FILE *stream);
