@@ -3,9 +3,9 @@
 #include <vector>
 #include <map>
 
-#include "ast/ast_expression.hpp"
+#include "ast/ast_node.hpp"
 
 
-extern const Expression *parseAST(char* filename);
+extern const Node *parseAST(char* filename);
 
 #endif

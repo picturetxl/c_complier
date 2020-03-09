@@ -5,6 +5,9 @@
         "xhash": "cpp",
         "ostream": "cpp",
         "iostream": "cpp",
-        "stdexcept": "cpp"
+        "stdexcept": "cpp",
+        "memory": "cpp",
+        "iosfwd": "cpp",
+        "xutility": "cpp"
     }
 }

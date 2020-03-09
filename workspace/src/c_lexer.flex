@@ -31,10 +31,12 @@ CHARACTOR ['][.]+[']
 
 STRING_L ".*"
 
+
 OTHER     .
 
 %%
 
+"#define"    {return T_DEFINE;}
 "int"       {return T_INT;}
 "if"        {return T_IF;}
 "else"      {return T_ELSE;}
@@ -68,6 +70,7 @@ OTHER     .
 "volatile"  {return T_VOLATILE;}
 "inline"    {return T_INLINE;}
 
+"..."       {return T_SOON;}
 
 "+"         {return T_ADD;}
 "-"         {return T_SUB;}
@@ -150,11 +153,11 @@ OTHER     .
               if(!isdigit(c))
               {
                   yylval.floatValue = stoi(temp.substr(0,size-1));
-                  return T_FLOAT;
+                  return T_V_FLOAT;
               }
-              yylval.floatValue = stod(yytext);return T_FLOAT;}
+              yylval.floatValue = stod(yytext);return T_V_FLOAT;}
 
-{STRING_L}  {yylval.string = new std::string(yytext); return T_STRING_L;}
+{STRING_L}  {yylval.string = new std::string(yytext); return T_V_STRING;}
 {ID}        {yylval.string = new std::string(yytext);return T_ID; }
 {OTHER}     {yyerror(yytext);}
 
