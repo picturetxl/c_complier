@@ -12,8 +12,8 @@ typedef const Arg_list *Arg_listPtr;
 class Arg_list:public Node
 {
 private:
-    Arg_listPtr next;
-    Arg_listPtr ex_var_declatation;
+    NodePtr next;
+    NodePtr ex_var_declatation;
 public:
     virtual ~Arg_list()
     {}

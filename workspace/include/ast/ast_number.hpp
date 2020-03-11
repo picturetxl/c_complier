@@ -7,10 +7,13 @@
 
 class Number;
 class Integer;
+class Float;
+class Mystring;
+
 typedef const Number *NumberPtr;
 typedef const Integer *IntegerPtr;
-
-
+typedef const Float *FloatPtr;
+typedef const Mystring *MystringPtr;
 class Number:public Node
 {
 
@@ -30,15 +33,15 @@ public:
 
 
 
-class Integer:public Number
+class Integer:public Node
 {
 private:
-    IntegerPtr integer;
+    int integer;
 public:
     virtual ~Integer()
     {}
 
-    Integer(NumberPtr _arg1)
+    Integer(int _arg1)
             : integer(_arg1)
     {}
     virtual void translate(std::ostream &dst) const
@@ -51,6 +54,53 @@ public:
     ) const
     { throw std::runtime_error("Not implemented."); }
 };
+
+class Float:public Number
+{
+private:
+    float floatptr;
+public:
+    virtual ~Float()
+    {}
+
+    Float(float _arg1)
+            : floatptr(_arg1)
+    {}
+    virtual void translate(std::ostream &dst) const
+    {
+        dst<<"float";
+    }
+
+    virtual double complie(
+        const std::map<std::string,double> &bindings
+    ) const
+    { throw std::runtime_error("Not implemented."); }
+};
+
+
+class Mystring:public Node
+{
+private:
+   std::string mystring;
+public:
+    virtual ~Mystring()
+    {}
+
+    Mystring(std::string _arg1)
+            : mystring(_arg1)
+    {}
+    virtual void translate(std::ostream &dst) const
+    {
+        dst<<mystring;
+    }
+
+    virtual double complie(
+        const std::map<std::string,double> &bindings
+    ) const
+    { throw std::runtime_error("Not implemented."); }
+};
+
+
 
 
 #endif

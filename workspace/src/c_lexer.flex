@@ -8,7 +8,7 @@
 // This is to work around an irritating bug in Flex
 // https://stackoverflow.com/questions/46213840/get-rid-of-warning-implicit-declaration-of-function-fileno-in-flex
 extern "C" int fileno(FILE *stream);
-
+  void yyerror(const char *);
 %}
 /* 声明部分 */
 
@@ -17,7 +17,7 @@ ID        [_a-zA-Z][_a-zA-Z0-9]*
 /*空白字符*/
 SPACE     [ \n\t]*
 /*注释*/
-COMMENT   /\*.*\*/
+COMMENT   "/*"[^"*/"]*"*/"
 /*整型*/
 INTEGER   [-]?[1-9][0-9]*[lLuU]*
 
@@ -29,7 +29,7 @@ HEX       0[xX][0-9a-fA-F]*
 OCT       0[1-9][0-9]*
 CHARACTOR ['][.]+[']
 
-STRING_L ".*"
+STRING_L L?\"(\\.|[^\\"])*\"
 
 
 OTHER     .
@@ -116,8 +116,8 @@ OTHER     .
 ":"         {return T_COLON;}
 
 
-{COMMENT}   {/*do nothing*/}
-{SPACE}     {/*do nothing*/}
+{COMMENT}   {;}
+{SPACE}     {;}
 
 {INTEGER}   {/*需要确定下是否带有后缀*/
               std::string temp = std::string(yytext);
@@ -128,22 +128,22 @@ OTHER     .
                   char cc = temp[size-2];
                   if(cc=='u' || cc=='U')
                   {//ul uL Ul UL
-                    yylval.u_long_value = stoi(temp.substr(0,size-2));
+                    yylval.u_long_value = atoi(temp.substr(0,size-2).c_str());
                     return T_ULONG;
                   }
                   //l or L
-                  yylval.long_int_value = stoi(temp.substr(0,size-1));
+                  yylval.long_int_value = atoi(temp.substr(0,size-1).c_str());
                   return T_LONGINT;
 
               }
               if(c=='u' || c=='U')
               {
                   
-                  yylval.u_int_value = stoi(temp.substr(0,size-1));
+                  yylval.u_int_value = atoi(temp.substr(0,size-1).c_str());
                   return T_UINT;
               }
 
-              yylval.intValue = stoi(yytext);return T_INTEGER;
+              yylval.int_value = atoi(yytext);return T_INTEGER;
               }
 {FLOAT}     {/*需要确定下是否带有后缀*/
               //去掉后缀
@@ -152,13 +152,13 @@ OTHER     .
               char c = temp[size-1];
               if(!isdigit(c))
               {
-                  yylval.floatValue = stoi(temp.substr(0,size-1));
+                  yylval.float_value = atof(temp.substr(0,size-1).c_str());
                   return T_V_FLOAT;
               }
-              yylval.floatValue = stod(yytext);return T_V_FLOAT;}
+              yylval.float_value = atof(yytext);return T_V_FLOAT;}
 
-{STRING_L}  {yylval.string = new std::string(yytext); return T_V_STRING;}
-{ID}        {yylval.string = new std::string(yytext);return T_ID; }
+{STRING_L}  {yylval.string_value = new std::string(yytext); return T_V_STRING;}
+{ID}        {yylval.string_value = new std::string(yytext); return T_ID; }
 {OTHER}     {yyerror(yytext);}
 
 %%

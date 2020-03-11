@@ -12,9 +12,9 @@ typedef const Ex_var_declaration *Ex_var_declarationPtr;
 class Ex_var_declaration:public Node
 {
 private:
-    Ex_var_declarationPtr type;
-    Ex_var_declarationPtr id;
-    Ex_var_declarationPtr value;
+    NodePtr type;
+    NodePtr id;
+    NodePtr value;
 public:
     virtual ~Ex_var_declaration()
     {}
@@ -24,6 +24,40 @@ public:
             , id(_arg2)
     {}
     Ex_var_declaration(NodePtr _arg1, NodePtr _arg2,NodePtr _arg3)
+            : type(_arg1)
+            , id(_arg2)
+            , value(_arg3)
+    {}
+    virtual void translate(std::ostream &dst) const
+    {
+        type->translate(dst);
+        id->translate(dst);
+        if (value!=nullptr)
+        {
+            value->translate(dst);
+        }
+        
+    }
+
+    virtual double complie(
+        const std::map<std::string,double> &bindings
+    ) const
+    { throw std::runtime_error("Not implemented."); }
+};
+
+
+class Ex_var_definition:public Node
+{
+private:
+    NodePtr type;
+    NodePtr id;
+    NodePtr value;
+public:
+    virtual ~Ex_var_definition()
+    {}
+
+   
+    Ex_var_definition(NodePtr _arg1, NodePtr _arg2,NodePtr _arg3)
             : type(_arg1)
             , id(_arg2)
             , value(_arg3)

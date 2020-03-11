@@ -12,8 +12,8 @@ typedef const Program *ProgramPtr;
 class Program:public Node
 {
 private:
-    ProgramPtr ex_declaration;
-    ProgramPtr function;
+    NodePtr ex_declaration;
+    NodePtr function;
 public:
     virtual ~Program()
     {}

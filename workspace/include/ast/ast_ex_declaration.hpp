@@ -16,8 +16,8 @@ typedef const Ex_function_declaration *Ex_function_declarationPtr;
 class Ex_declaration:public Node
 {
 private:
-    Ex_declarationPtr ex_non_function_declaration;
-    Ex_declarationPtr ex_function_declaration;
+    NodePtr ex_non_function_declaration;
+    NodePtr ex_function_declaration;
 public:
     virtual ~Ex_declaration()
     {}
@@ -43,8 +43,8 @@ public:
 class Ex_non_function_declaration:public Node
 {
 private:
-    Ex_non_function_declarationPtr ex_var_declatation;
-    Ex_non_function_declarationPtr ex_var_definition;
+    NodePtr ex_var_declatation;
+    NodePtr ex_var_definition;
 public:
     virtual ~Ex_non_function_declaration()
     {}
@@ -69,9 +69,11 @@ public:
 class Ex_function_declaration:public Node
 {
 private:
-    Ex_function_declarationPtr type;
-    Ex_function_declarationPtr id;
-    Ex_function_declarationPtr arglist;
+    NodePtr special;
+    NodePtr type;
+    NodePtr id;
+    NodePtr arglist;
+   
 public:
     virtual ~Ex_function_declaration()
     {}
@@ -81,8 +83,18 @@ public:
             , id(_arg2)
             , arglist(_arg2)
     {}
+    Ex_function_declaration(NodePtr _arg1, NodePtr _arg2,NodePtr _arg3,NodePtr _arg4)
+            : special(_arg1)
+            , type(_arg2)
+            , id(_arg3)
+            , arglist(_arg4)
+    {}
     virtual void translate(std::ostream &dst) const
     {
+        if(special!=nullptr)
+        {
+            special->translate(dst);
+        }
         type->translate(dst);
         id->translate(dst);
         arglist->translate(dst);
