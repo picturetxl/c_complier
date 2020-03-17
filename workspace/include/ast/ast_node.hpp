@@ -1,28 +1,37 @@
+
 #ifndef ast_node_hpp
 #define ast_node_hpp
 
-#include <map>
+#include <string>
 #include <iostream>
+#include <map>
+
+#include <memory>
 
 class Node;
 
 typedef const Node *NodePtr;
-/*
-    抽象基类
-*/
+
+
+typedef struct translate_context{
+
+}TranslateContext;
+
+typedef struct complier_context{
+
+}CompileContext;
 class Node
 {
-
 public:
     virtual ~Node()
     {}
+    Node(){}
+    //! Tell and expression to print itself to the given stream
+    virtual void PrettyPrint(std::ostream &dst) const =0;
 
-    virtual void translate(std::ostream &dst) const = 0;
+    virtual void translate(std::ostream &dst, TranslateContext &context) const =0;
 
-    virtual double complie(
-        const std::map<std::string,double> &bindings
-    ) const
-    { throw std::runtime_error("Not implemented."); }
+    virtual void compile(std::ostream &dst, CompileContext &context) const =0;
 };
 
 

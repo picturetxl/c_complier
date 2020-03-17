@@ -6,13 +6,19 @@
    try to interpret code surrounded by %{ ... %} */
 
 #include "c_parser.tab.hpp"
-#include "c_lexer_helper.hpp"
-
 extern FILE* yyin;
 
 // This is to work around an irritating bug in Flex
 // https://stackoverflow.com/questions/46213840/get-rid-of-warning-implicit-declaration-of-function-fileno-in-flex
 extern "C" int fileno(FILE *stream);
+
+
+void set_string_by_yytext();
+bool isL();
+bool isU();
+void set_int_value_by_yytext(int format);
+void set_float_value_by_yytext();
+
 
 /* End the embedded code section. */
 %}
@@ -46,106 +52,58 @@ OTHER					.
 
 %%
 
-"auto"				{ fprintf(stderr, "AUTO\n"); 		return T_AUTO;}
-"double"			{ fprintf(stderr, "DOUBLE\n"); 		return T_DOUBLE;}
-"int"				{ fprintf(stderr, "INT\n"); 		return T_INT;}
-"struct"			{ fprintf(stderr, "STRUCT\n");		return T_STRUCT;}
-"break"				{ fprintf(stderr, "BREAK\n");		return T_BREAK;}
-"else"				{ fprintf(stderr, "ELSE\n");		return T_ELSE;}
-"long"				{ fprintf(stderr, "LONG\n");		return T_LONG;}
-"switch"			{ fprintf(stderr, "SWITCH\n");		return T_SWITCH;}
-"case"				{ fprintf(stderr, "CASE\n");		return T_CASE;}
-"enum"				{ fprintf(stderr, "ENUM\n");		return T_ENUM;}
-"..." 				{ fprintf(stderr, "ELIPSIS\n");		return T_ELIPSIS;}
-"register"			{ fprintf(stderr, "REGISTER\n");	return T_REGISTER;}
-"typedef"			{ fprintf(stderr, "TYPEDEF\n");		return T_TYPEDEF;}
-"char"				{ fprintf(stderr, "CHAR\n");		return T_CHAR;}
-"extern"			{ fprintf(stderr, "EXTERN\n");		return T_EXTERN;}
-"return"			{ fprintf(stderr, "RETURN\n");		return T_RETURN;}
-"union"				{ fprintf(stderr, "UNION\n");		return T_UNION;}
-"const"				{ fprintf(stderr, "CONST\n");		return T_CONST;}
-"float"				{ fprintf(stderr, "FLOAT\n");		return T_FLOAT;}
-"short"				{ fprintf(stderr, "SHORT\n");		return T_SHORT;}
-"unsigned"			{ fprintf(stderr, "UNSIGNED\n");	return T_UNSIGNED;}
-"continue"			{ fprintf(stderr, "CONTINUE\n");	return T_CONTINUE;}
-"for"				{ fprintf(stderr, "FOR\n");			return T_FOR;}
-"signed"			{ fprintf(stderr, "SIGNED\n");		return T_SIGNED;}
-"void"				{ fprintf(stderr, "VOID\n");		eturn T_VOID;}
-"default"			{ fprintf(stderr, "DEFAULT\n");		return T_DEFAULT;}
-"goto"				{ fprintf(stderr, "GOTO\n");		eturn T_GOTO;}
-"sizeof"			{ fprintf(stderr, "SIZEOF\n");		return T_SIZEOF;}
-"volatile"			{ fprintf(stderr, "VOLATILE\n");	return T_VOLATILE;}
-"do"				{ fprintf(stderr, "DO\n");			return T_DO;}
-"if"				{ fprintf(stderr, "IF\n");			return T_IF;}
-"static"			{ fprintf(stderr, "STATIC\n");		return T_STATIC;}
-"while"				{ fprintf(stderr, "WHILE\n");		return T_WHILE;}
+"auto"				{ fprintf(stderr, "auto"); 		return T_AUTO;}
+"double"			{ fprintf(stderr, "double"); 		return T_DOUBLE;}
+"int"				{ fprintf(stderr, "int"); 		return T_INT;}
+"struct"			{ fprintf(stderr, "struct\n");		return T_STRUCT;}
+"break"				{ fprintf(stderr, "break\n");		return T_BREAK;}
+"else"				{ fprintf(stderr, "else\n");		return T_ELSE;}
+"long"				{ fprintf(stderr, "long\n");		return T_LONG;}
+"switch"			{ fprintf(stderr, "switch\n");		return T_SWITCH;}
+"case"				{ fprintf(stderr, "case\n");		return T_CASE;}
+"enum"				{ fprintf(stderr, "enum\n");		return T_ENUM;}
+"..." 				{ fprintf(stderr, "...\n");		return T_ELIPSIS;}
+"register"			{ fprintf(stderr, "register\n");	return T_REGISTER;}
+"typedef"			{ fprintf(stderr, "typdef\n");		return T_TYPEDEF;}
+"char"				{ fprintf(stderr, "char\n");		return T_CHAR;}
+"extern"			{ fprintf(stderr, "extern\n");		return T_EXTERN;}
+"return"			{ fprintf(stderr, "return\n");		return T_RETURN;}
+"union"				{ fprintf(stderr, "union\n");		return T_UNION;}
+"const"				{ fprintf(stderr, "const\n");		return T_CONST;}
+"float"				{ fprintf(stderr, "float\n");		return T_FLOAT;}
+"short"				{ fprintf(stderr, "short\n");		return T_SHORT;}
+"unsigned"			{ fprintf(stderr, "unsigned\n");	return T_UNSIGNED;}
+"continue"			{ fprintf(stderr, "continue\n");	return T_CONTINUE;}
+"for"				{ fprintf(stderr, "for\n");			return T_FOR;}
+"signed"			{ fprintf(stderr, "signed\n");		return T_SIGNED;}
+"void"				{ fprintf(stderr, "void\n");		return T_VOID;}
+"default"			{ fprintf(stderr, "default\n");		return T_DEFAULT;}
+"goto"				{ fprintf(stderr, "goto\n");		return T_GOTO;}
+"sizeof"			{ fprintf(stderr, "sizeof\n");		return T_SIZEOF;}
+"volatile"			{ fprintf(stderr, "volatile\n");	return T_VOLATILE;}
+"do"				{ fprintf(stderr, "do\n");			return T_DO;}
+"if"				{ fprintf(stderr, "if\n");			return T_IF;}
+"static"			{ fprintf(stderr, "static\n");		return T_STATIC;}
+"while"				{ fprintf(stderr, "while\n");		return T_WHILE;}
 
 
-{IDENTIFIER}		{ 	/* 标识符 */
-						fprintf(stderr, "Identifier : %s\n", yytext);
-						set_string_by_yytext();
-						return T_IDENTIFIER; 
-					}
 
-{DECIMAL_CONSTANT}  { 	/* 整型常量*/
-						fprintf(stderr, "Decimal : %s\n", yytext);
-						if(isL() and isU())		{ set_int_value_by_yytext(10); return T_UNSIGNED_LONG_CONSTANT; }
-						if(isL() and !isU())	{ set_int_value_by_yytext(10); return T_LONG_CONSTANT;}
-						if(!isL() and isU())	{ set_int_value_by_yytext(10); return T_UNSIGNED_CONSTANT;}
-						if(!isL() and !isU())	{ set_int_value_by_yytext(10); return T_INT_CONSTANT;}
-					}
+"{"					{ fprintf(stderr, "{");return T_L_BRACE; }
+"}"					{ fprintf(stderr, "}");return T_R_BRACE; }
+"("					{ fprintf(stderr, "(");return T_L_BRACKET; }
+")"					{ fprintf(stderr, ")");return T_R_BRACKET; }
+"["					{ fprintf(stderr, "[");return T_L_SQUARE; }
+"]"					{ fprintf(stderr, "]");return T_R_SQUARE; }
 
-{OCTAL_CONSTANT}  	{ 	/*八进制常量*/
-						fprintf(stderr, "Octal : %s\n", yytext);
-						if(isL() and isU())		{ set_int_value_by_yytext(8); return T_UNSIGNED_LONG_CONSTANT; }
-						if(isL() and !isU())	{ set_int_value_by_yytext(8); return T_LONG_CONSTANT;}
-						if(!isL() and isU())	{ set_int_value_by_yytext(8); return T_UNSIGNED_CONSTANT;}
-						if(!isL() and !isU())	{ set_int_value_by_yytext(8); return T_INT_CONSTANT;}
-					}
-					
-{HEXAD_CONSTANT}  	{ 	/*十六进制*/
-						fprintf(stderr, "Hexadecimal : %s\n", yytext);
-						if(isL() and isU())		{ set_int_value_by_yytext(16); return T_UNSIGNED_LONG_CONSTANT; }
-						if(isL() and !isU())	{ set_int_value_by_yytext(16); return T_LONG_CONSTANT;}
-						if(!isL() and isU())	{ set_int_value_by_yytext(16); return T_UNSIGNED_CONSTANT;}
-						if(!isL() and !isU())	{ set_int_value_by_yytext(16); return T_INT_CONSTANT;}
-					}
+"+"					{ fprintf(stderr, "+");return T_OP_PLUS; }
+"-"					{ fprintf(stderr, "-");return T_OP_MINUS; }
+"*"					{ fprintf(stderr, "*");return T_OP_MUL; }
+"/"					{ fprintf(stderr, "/");return T_OP_DIV; }
+"%"					{ fprintf(stderr, "%%");return T_OP_MOD; }
 
-{FLOAT_CONSTANT}	{ 	/*浮点常量*/
-						fprintf(stderr, "Float constant : %s\n", yytext);
-						set_float_value_by_yytext();
-						return T_FLOAT_CONSTANT;
-					}
-
-{CHAR_CONSTANT}		{ 	/*字符常量*/
-						fprintf(stderr, "Character : %s\n", yytext);
-						yylval.characterValue = yytext[0];
-						return T_CHARACTER_CONSTANT; 
-					}
-
-{STRINGLITERAL}		{ 	/*字符串常量*/
-						fprintf(stderr, "String : %s\n", yytext);
-						set_string_by_yytext();
-						return T_STRING_LITERAL;
-					}
-
-
-"{"					{ fprintf(stderr, "L_BRACE\n");return T_L_BRACE; }
-"}"					{ fprintf(stderr, "R_BRACE\n");return T_R_BRACE; }
-"("					{ fprintf(stderr, "L_BRACKET\n");return T_L_BRACKET; }
-")"					{ fprintf(stderr, "R_BRACKET\n");return T_R_BRACKET; }
-"["					{ fprintf(stderr, "L_SQUARE\n");return T_L_SQUARE; }
-"]"					{ fprintf(stderr, "R_SQUARE\n");return T_R_SQUARE; }
-
-"+"					{ fprintf(stderr, "OP_PLUS\n");return T_OP_PLUS; }
-"-"					{ fprintf(stderr, "OP_MINUS\n");return T_OP_MINUS; }
-"*"					{ fprintf(stderr, "OP_MUL\n");return T_OP_MUL; }
-"/"					{ fprintf(stderr, "OP_DIV\n");return T_OP_DIV; }
-"%"					{ fprintf(stderr, "OP_MOD\n");return T_OP_MOD; }
-
-"++" 				{ fprintf(stderr, "OP_INC\n");return T_OP_INC; }
-"--" 				{ fprintf(stderr, "OP_DEC\n");return T_OP_DEC; }
-"<=" 				{ fprintf(stderr, "OP_LE\n");return T_OP_LE; }
+"++" 				{ fprintf(stderr, "++");return T_OP_INC; }
+"--" 				{ fprintf(stderr, "--");return T_OP_DEC; }
+"<=" 				{ fprintf(stderr, "<=");return T_OP_LE; }
 ">=" 				{ fprintf(stderr, "OP_GE\n");return T_OP_GE; }
 "==" 				{ fprintf(stderr, "OP_EQ\n");return T_OP_EQ; }
 "!="				{ fprintf(stderr, "OP_NE\n");return T_OP_NE; }
@@ -181,15 +139,64 @@ OTHER					.
 ";"					{ fprintf(stderr, ";\n");return ';'; }
 ","					{ fprintf(stderr, ",\n");return ','; }
 "."					{ fprintf(stderr, ".\n");return '.'; }
+";;"				{ fprintf(stderr, ";;\n");return T_ENDLESS_LOOP; }
+
+{IDENTIFIER}		{ 	/* 标识符 */
+						fprintf(stderr, "%s", yytext);
+						set_string_by_yytext();
+						return T_IDENTIFIER; 
+					}
+
+{DECIMAL_CONSTANT}  { 	/* 整型常量*/
+						fprintf(stderr, "%s", yytext);
+						if(isL() and isU())		{ set_int_value_by_yytext(10); return T_UNSIGNED_LONG_CONSTANT; }
+						if(isL() and !isU())	{ set_int_value_by_yytext(10); return T_LONG_CONSTANT;}
+						if(!isL() and isU())	{ set_int_value_by_yytext(10); return T_UNSIGNED_CONSTANT;}
+						if(!isL() and !isU())	{ set_int_value_by_yytext(10); return T_INT_CONSTANT;}
+					}
+
+{OCTAL_CONSTANT}  	{ 	/*八进制常量*/
+						fprintf(stderr, "%s", yytext);
+						if(isL() and isU())		{ set_int_value_by_yytext(8); return T_UNSIGNED_LONG_CONSTANT; }
+						if(isL() and !isU())	{ set_int_value_by_yytext(8); return T_LONG_CONSTANT;}
+						if(!isL() and isU())	{ set_int_value_by_yytext(8); return T_UNSIGNED_CONSTANT;}
+						if(!isL() and !isU())	{ set_int_value_by_yytext(8); return T_INT_CONSTANT;}
+					}
+					
+{HEXAD_CONSTANT}  	{ 	/*十六进制*/
+						fprintf(stderr, "Hexadecimal : %s\n", yytext);
+						if(isL() and isU())		{ set_int_value_by_yytext(16); return T_UNSIGNED_LONG_CONSTANT; }
+						if(isL() and !isU())	{ set_int_value_by_yytext(16); return T_LONG_CONSTANT;}
+						if(!isL() and isU())	{ set_int_value_by_yytext(16); return T_UNSIGNED_CONSTANT;}
+						if(!isL() and !isU())	{ set_int_value_by_yytext(16); return T_INT_CONSTANT;}
+					}
+
+{FLOAT_CONSTANT}	{ 	/*浮点常量*/
+						fprintf(stderr, "Float constant : %s\n", yytext);
+						set_float_value_by_yytext();
+						return T_FLOAT_CONSTANT;
+					}
+
+{CHAR_CONSTANT}		{ 	/*字符常量*/
+						fprintf(stderr, "Character : %s\n", yytext);
+						yylval.characterValue = yytext[0];
+						return T_CHARACTER_CONSTANT; 
+					}
+
+{STRINGLITERAL}		{ 	/*字符串常量*/
+						fprintf(stderr, "String : %s\n", yytext);
+						set_string_by_yytext();
+						return T_STRING_LITERAL;
+					}
+
 
 
 {INCLUDE}			{ fprintf(stderr, "#include\n"); }
 {COMMENT}			{ fprintf(stderr, "comment\n"); }
-{WHITESPACE}    	{ fprintf(stderr, "Newline, tab or space\n");  }
+{WHITESPACE}    	{ fprintf(stderr, "	");  }
 {OTHER}				{ yyerror(yytext); }
 
 %%
-
 /*-----------------------.
 | function definition.  |
 `-----------------------*/
@@ -203,10 +210,11 @@ void set_string_by_yytext()
 //是不是L后缀的整型常量
 bool isL()
 {
-	std::string tmp(yytext);//转成string 好处理
-	//取最后一个字符
-	char c = tmp(tmp.size()-1);
-	if(c=='l' or c=='L')
+	int size = strlen(yytext);
+	if(size < 2){
+		return false;
+	}
+	if(yytext[size-1]=='l' || yytext[size-1]=='L')
 		return true;
 	else
 		return false;
@@ -214,10 +222,12 @@ bool isL()
 //是不是U后缀的整型常量
 bool isU()
 {
-	std::string tmp(yytext);//转成string 好处理
-	//取最后一个字符
-	char c = tmp(tmp.size()-1);
-	if(c=='u' or c=='U')
+	int size = strlen(yytext);
+	if(size < 2){
+		return false;
+	}
+	
+	if(yytext[size-1]=='u'|| yytext[size-1]=='U')
 		return true;
 	else
 		return false;

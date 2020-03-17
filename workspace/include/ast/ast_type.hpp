@@ -1,77 +1,150 @@
+
 #ifndef ast_type_hpp
 #define ast_type_hpp
 
-#include <map>
+#include "../ast.hpp"
+
+#include <string>
 #include <iostream>
-#include "ast_node.hpp"
-class Type;
-class Special;
-typedef const Type *TypePtr;
-typedef const Special *SpecialPtr;
-/*
-    抽象基类
-*/
-class Type:public Node
+#include <map>
+
+#include <memory>
+
+class TYPE;
+
+typedef const TYPE *TYPEPtr;
+
+class TYPE : public Node
 {
 private:
-    std::string* type;
-    NodePtr special;
-    NodePtr next_type;
+    NodePtr expr;
+
 public:
-    virtual ~Type()
-    {}
-    Type(std::string* type)
-            : type(type)
-    {}
-    Type(NodePtr special,NodePtr next_type)
-            : special(special)
-            , next_type(next_type)
-    {}
-    virtual void translate(std::ostream &dst) const
+    virtual ~TYPE()
     {
-        if(special==nullptr or next_type == nullptr)
-        {
-            std::cout<<*type;
-        }
-        else
-        {
-            special->translate(dst);
-            next_type->translate(dst);
-        }
-        
+    }
+    TYPE()
+    {
        
     }
-    
+    //! Tell and expression to print itself to the given stream
+    virtual void PrettyPrint(std::ostream &dst) const =0;
+    virtual void translate(std::ostream &dst, TranslateContext &context) const override{}
 
-    virtual double complie(
-        const std::map<std::string,double> &bindings
-    ) const
-    { throw std::runtime_error("Not implemented."); }
+    virtual void compile(std::ostream &dst, CompileContext &context) const override{}
 };
 
+class TypeInt;
 
-class Special:public Node
+typedef const TypeInt *TypeIntPtr;
+
+class TypeInt : public Node
 {
 private:
-    std::string* special;
-public:
-    virtual ~Special()
-    {}
-    Special(std::string* type)
-            : special(type)
-    {}
-   
-    virtual void translate(std::ostream &dst) const
-    {
-        std::cout<<*special;
-    }
-    
+    std::string s;
 
-    virtual double complie(
-        const std::map<std::string,double> &bindings
-    ) const
-    { throw std::runtime_error("Not implemented."); }
+public:
+    virtual ~TypeInt()
+    {
+    }
+    TypeInt(std::string str)
+    {
+       s = str;
+    }
+    //! Tell and expression to print itself to the given stream
+    virtual void PrettyPrint(std::ostream &dst) const
+    {
+        dst<<s<<std::endl;
+    }
+    virtual void translate(std::ostream &dst, TranslateContext &context) const override{}
+
+    virtual void compile(std::ostream &dst, CompileContext &context) const override {}
 };
+
+
+class TypeDouble;
+
+typedef const TypeDouble *TypeDoublePtr;
+
+class TypeDouble : public Node
+{
+private:
+    std::string s;
+
+public:
+    virtual ~TypeDouble()
+    {
+    }
+    TypeDouble(std::string str)
+    {
+       s = str;
+    }
+    //! Tell and expression to print itself to the given stream
+    virtual void PrettyPrint(std::ostream &dst) const override
+    {
+        dst<<s<<std::endl;
+    }
+    virtual void translate(std::ostream &dst, TranslateContext &context) const override{}
+
+    virtual void compile(std::ostream &dst, CompileContext &context) const override{}
+};
+
+
+class TypeFloat;
+
+typedef const TypeFloat *TypeFloatPtr;
+
+class TypeFloat : public Node
+{
+private:
+    std::string s;
+
+public:
+    virtual ~TypeFloat()
+    {
+    }
+    TypeFloat(std::string str)
+    {
+       s = str;
+    }
+    //! Tell and expression to print itself to the given stream
+    virtual void PrettyPrint(std::ostream &dst) const override
+    {
+        dst<<s<<std::endl;
+    }
+    virtual void translate(std::ostream &dst, TranslateContext &context) const override {}
+
+    virtual void compile(std::ostream &dst, CompileContext &context) const override {}
+};
+
+class TypeStar;
+
+typedef const TypeStar *TypeStarPtr;
+
+class TypeStar : public Node
+{
+private:
+    std::string s;
+
+public:
+    virtual ~TypeStar()
+    {
+    }
+    TypeStar(std::string str)
+    {
+       s = str;
+    }
+    //! Tell and expression to print itself to the given stream
+    virtual void PrettyPrint(std::ostream &dst) const override
+    {
+        dst<<s<<std::endl;
+    }
+    virtual void translate(std::ostream &dst, TranslateContext &context) const override{}
+
+    virtual void compile(std::ostream &dst, CompileContext &context) const override{}
+};
+
+
 
 
 

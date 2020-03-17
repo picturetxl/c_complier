@@ -39,88 +39,109 @@
 #if YYDEBUG
 extern int yydebug;
 #endif
+/* "%code requires" blocks.  */
+#line 5 "src/c_parser.y" /* yacc.c:1909  */
+
+  #include "../include/ast.hpp"
+
+  #include <cassert>
+
+  extern FILE* yyin;
+  extern const Node *g_root; 
+
+
+  int yylex(void);
+  void yyerror(const char *);
+
+#line 57 "src/c_parser.tab.hpp" /* yacc.c:1909  */
 
 /* Token type.  */
 #ifndef YYTOKENTYPE
 # define YYTOKENTYPE
   enum yytokentype
   {
-    T_INT = 258,
-    T_IF = 259,
-    T_ELSE = 260,
-    T_WHILE = 261,
-    T_VOID = 262,
-    T_FLOAT = 263,
-    T_DOUBLE = 264,
-    T_AUTO = 265,
-    T_BREAK = 266,
-    T_CASE = 267,
-    T_CHAR = 268,
-    T_CONST = 269,
-    T_CONTINUE = 270,
-    T_DEFUALT = 271,
-    T_DO = 272,
-    T_ENUM = 273,
-    T_EXTERN = 274,
-    T_FOR = 275,
-    T_GOTO = 276,
-    T_LONG = 277,
-    T_REGISTER = 278,
-    T_SHORT = 279,
-    T_SIGNED = 280,
-    T_SIZEOF = 281,
-    T_STATIC = 282,
-    T_STRUCT = 283,
-    T_SWITCH = 284,
-    T_TYPEDEF = 285,
-    T_UNION = 286,
-    T_UNSIGNED = 287,
-    T_VOLATILE = 288,
-    T_INLINE = 289,
-    T_DEFINE = 290,
-    T_SOON = 291,
-    T_ADD = 292,
-    T_SUB = 293,
-    T_MUL = 294,
-    T_DIV = 295,
-    T_MOD = 296,
-    T_INC = 297,
-    T_DEC = 298,
-    T_EQ = 299,
-    T_GE = 300,
-    T_LE = 301,
-    T_GR = 302,
-    T_LS = 303,
-    T_ADD_ASSIGN = 304,
-    T_SUB_ASSIGN = 305,
-    T_MUL_ASSIGN = 306,
-    T_DIV_ASSIGN = 307,
-    T_LPARENTHESIS = 308,
-    T_RPARENTHESIS = 309,
-    T_LBRACE = 310,
-    T_RBRACE = 311,
-    T_LSQUARE = 312,
-    T_RSQUARE = 313,
-    T_BOR = 314,
-    T_BAND = 315,
-    T_BXOR = 316,
-    T_NOT = 317,
-    T_LSHIFT = 318,
-    T_RSHIFT = 319,
-    T_POINTER = 320,
-    T_QUESTION = 321,
-    T_SEMICOLON = 322,
-    T_SPOT = 323,
-    T_COMMA = 324,
-    T_COLON = 325,
-    T_V_FLOAT = 326,
-    T_INTEGER = 327,
-    T_UINT = 328,
-    T_LONGINT = 329,
-    T_ULONG = 330,
-    T_CHARACTOR = 331,
-    T_V_STRING = 332,
-    T_ID = 333
+    T_AUTO = 258,
+    T_DOUBLE = 259,
+    T_INT = 260,
+    T_STRUCT = 261,
+    T_BREAK = 262,
+    T_ELSE = 263,
+    T_LONG = 264,
+    T_SWITCH = 265,
+    T_CASE = 266,
+    T_ENUM = 267,
+    T_ELIPSIS = 268,
+    T_REGISTER = 269,
+    T_TYPEDEF = 270,
+    T_CHAR = 271,
+    T_EXTERN = 272,
+    T_RETURN = 273,
+    T_UNION = 274,
+    T_CONST = 275,
+    T_FLOAT = 276,
+    T_SHORT = 277,
+    T_UNSIGNED = 278,
+    T_CONTINUE = 279,
+    T_FOR = 280,
+    T_SIGNED = 281,
+    T_VOID = 282,
+    T_DEFAULT = 283,
+    T_GOTO = 284,
+    T_SIZEOF = 285,
+    T_VOLATILE = 286,
+    T_DO = 287,
+    T_IF = 288,
+    T_STATIC = 289,
+    T_WHILE = 290,
+    T_IDENTIFIER = 291,
+    T_STRING_LITERAL = 292,
+    T_UNSIGNED_LONG_CONSTANT = 293,
+    T_LONG_CONSTANT = 294,
+    T_UNSIGNED_CONSTANT = 295,
+    T_INT_CONSTANT = 296,
+    T_FLOAT_CONSTANT = 297,
+    T_CHARACTER_CONSTANT = 298,
+    T_L_BRACE = 299,
+    T_R_BRACE = 300,
+    T_L_BRACKET = 301,
+    T_R_BRACKET = 302,
+    T_L_SQUARE = 303,
+    T_R_SQUARE = 304,
+    T_OP_PLUS = 305,
+    T_OP_MINUS = 306,
+    T_OP_MUL = 307,
+    T_OP_DIV = 308,
+    T_OP_MOD = 309,
+    T_OP_INC = 310,
+    T_OP_DEC = 311,
+    T_OP_LE = 312,
+    T_OP_GE = 313,
+    T_OP_EQ = 314,
+    T_OP_NE = 315,
+    T_OP_LT = 316,
+    T_OP_GT = 317,
+    T_OP_LAND = 318,
+    T_OP_LOR = 319,
+    T_OP_LNOT = 320,
+    T_OP_BAND = 321,
+    T_OP_BOR = 322,
+    T_OP_BXOR = 323,
+    T_OP_B_ONESC = 324,
+    T_OP_BRIGHT = 325,
+    T_OP_BLEFT = 326,
+    T_OP_PTR = 327,
+    T_ASSIGN = 328,
+    T_RIGHT_ASSIGN = 329,
+    T_LEFT_ASSIGN = 330,
+    T_ADD_ASSIGN = 331,
+    T_SUB_ASSIGN = 332,
+    T_MUL_ASSIGN = 333,
+    T_DIV_ASSIGN = 334,
+    T_MOD_ASSIGN = 335,
+    T_AND_ASSIGN = 336,
+    T_OR_ASSIGN = 337,
+    T_XOR_ASSIGN = 338,
+    T_ENDLESS_LOOP = 339
   };
 #endif
 
@@ -129,20 +150,18 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 18 "src/c_parser.y" /* yacc.c:1909  */
+#line 19 "src/c_parser.y" /* yacc.c:1909  */
 
-  const Node *node;//节点
-  double float_value;//浮点数
-  int int_value;//整数
-  //处理后缀情况
-  unsigned int u_int_value;//u
-  long int long_int_value;//l
-  unsigned long u_long_value;//ul
-  char char_value;//字符
-  std::string *string_value;//标识符或者字面量字符串
+  const Node* node;
+  std::string* string;
+  int intValue;
+  unsigned int uintValue;
+  long int longintValue;
+  unsigned long longuintValue;
+  char characterValue;
+  double floatValue;
 
-
-#line 146 "src/c_parser.tab.hpp" /* yacc.c:1909  */
+#line 165 "src/c_parser.tab.hpp" /* yacc.c:1909  */
 };
 
 typedef union YYSTYPE YYSTYPE;

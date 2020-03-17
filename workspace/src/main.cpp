@@ -30,9 +30,13 @@ int main(int argc,char*argv[])
     //c to python
     if(mode == "--translate")
     {
-        ast->translate(std::cout);
+        //ast->translate(std::cout);
     }
-
+    //./bin/c_compiler --print test/hello.c -o hello.py
+    if(mode == "--print")
+    {
+        ast->PrettyPrint(std::cout);
+    }
     //close file
     // dest_file.close();
     return 0;

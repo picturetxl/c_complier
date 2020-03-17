@@ -1,6 +1,6 @@
 
-#ifndef ast_program_hpp
-#define ast_program_hpp
+#ifndef ast_function_hpp
+#define ast_function_hpp
 
 #include "../ast.hpp"
 
@@ -10,31 +10,33 @@
 
 #include <memory>
 
-class Program;
+class Function;
 
-typedef const Program *ProgramPtr;
+typedef const Function *FunctionPtr;
 
-class Program : public Node
+class Function : public Node
 {
 private:
-    NodePtr program;
-    NodePtr external_object;
+    NodePtr type;
+    NodePtr function_call;
+    NodePtr statement;
 
 public:
-    virtual ~Program()
+    virtual ~Function()
     {
     }
-    Program(NodePtr _argv1,NodePtr _argv2)
+    Function(NodePtr _argv1,NodePtr _argv2,NodePtr _argv3)
     {
-        program = _argv1;
-        external_object  = _argv2;
+        type = _argv1;
+        function_call = _argv2;
+        statement = _argv3;
     }
-
     //! Tell and expression to print itself to the given stream
     virtual void PrettyPrint(std::ostream &dst) const override
     {
-        program->PrettyPrint(dst);
-        external_object->PrettyPrint(dst);
+        type->PrettyPrint(dst);
+        function_call->PrettyPrint(dst);
+        statement->PrettyPrint(dst);
     }
 
     virtual void translate(std::ostream &dst, TranslateContext &context) const override {}

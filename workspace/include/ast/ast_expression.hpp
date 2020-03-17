@@ -1,67 +1,109 @@
+
 #ifndef ast_expression_hpp
 #define ast_expression_hpp
 
-#include "ast_node.hpp"
-#include <map>
+#include "../ast.hpp"
+
+#include <string>
 #include <iostream>
+#include <map>
+
+#include <memory>
 
 class Expression;
-class Funciton_node;
-typedef const Expression *ExpressionPtr;
-typedef const Funciton_node *Funciton_nodePtr;
 
-class Expression:public Node
+typedef const Expression *ExpresionPtr;
+
+class Expression : public Node
 {
 private:
-    NodePtr left;
-    std::string op;
-    NodePtr right;
+
 public:
     virtual ~Expression()
-    {}
-
-    Expression(NodePtr _arg1, std::string op,NodePtr _arg2)
-            : left(_arg1)
-            ,op(op)
-            , right(_arg2)
-    {}
-    virtual void translate(std::ostream &dst) const
     {
-        left->translate(dst);
-        right->translate(dst);
     }
+    Expression()
+    {
+    }
+    //! Tell and expression to print itself to the given stream
+    virtual void PrettyPrint(std::ostream &dst) const =0;
 
-    virtual double complie(
-        const std::map<std::string,double> &bindings
-    ) const
-    { throw std::runtime_error("Not implemented."); }
+    virtual void translate(std::ostream &dst, TranslateContext &context) const =0;
+
+    virtual void compile(std::ostream &dst, CompileContext &context) const =0;
 };
 
+//--------------------------------------OpExpression----------------------------------------------------
+class OpExpression;
 
-class Funciton_node:public Node
+typedef const OpExpression *OpExpressionPtr;
+
+class OpExpression : public Expression
 {
 private:
-    NodePtr ex_function_declaration;
-    NodePtr expr;
+    NodePtr expr1;
+    NodePtr expr2;
 public:
-    virtual ~Funciton_node()
-    {}
-
-    Funciton_node(NodePtr _arg1,NodePtr _arg2)
-            : ex_function_declaration(_arg1)
-            , expr(_arg2)
-    {}
-    virtual void translate(std::ostream &dst) const
+    virtual ~OpExpression()
     {
-        ex_function_declaration->translate(dst);
-        expr->translate(dst);
+    }
+    OpExpression(NodePtr _argv1,NodePtr _argv2)
+    {
+        expr1 = _argv1;
+        expr2 =_argv2;
+       
+    }
+    //! Tell and expression to print itself to the given stream
+    virtual void PrettyPrint(std::ostream &dst) const override
+    {
+        expr1->PrettyPrint(dst);
+        expr2->PrettyPrint(dst);
     }
 
-    virtual double complie(
-        const std::map<std::string,double> &bindings
-    ) const
-    { throw std::runtime_error("Not implemented."); }
+    virtual void translate(std::ostream &dst, TranslateContext &context) const override {}
+
+    virtual void compile(std::ostream &dst, CompileContext &context) const override {}
 };
+
+//+++++++++++++++++++++++++++++++StructDeclaration+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//--------------------------------------SingleExpression----------------------------------------------------
+class SingleExpression;
+
+typedef const SingleExpression *SingleExpressionPtr;
+
+class SingleExpression : public Expression
+{
+private:
+    NodePtr expr1;
+    NodePtr expr2;
+public:
+    virtual ~SingleExpression()
+    {
+    }
+    SingleExpression(NodePtr _argv1,NodePtr _argv2)
+    {
+        expr1 = _argv1;
+        expr2 =_argv2;
+       
+    }
+    //! Tell and expression to print itself to the given stream
+    virtual void PrettyPrint(std::ostream &dst) const override
+    {
+        expr1->PrettyPrint(dst);
+        expr2->PrettyPrint(dst);
+    }
+
+    virtual void translate(std::ostream &dst, TranslateContext &context) const override {}
+
+    virtual void compile(std::ostream &dst, CompileContext &context) const override {}
+};
+
+//+++++++++++++++++++++++++++++++SingleExpression+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
 
 
 #endif
+
