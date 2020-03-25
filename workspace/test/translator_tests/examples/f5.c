@@ -1,7 +1,13 @@
+int x;
+
+int f()
+{
+    x=x+1;
+    return x;
+}
+
 int main()
 {
-    int z;
-    z=7;
-    return z;
+    return f()+f();
 }
 

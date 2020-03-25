@@ -1,15 +1,20 @@
+/*
+ * @Author: your name
+ * @Date: 2020-03-21 02:53:11
+ * @LastEditTime: 2020-03-21 11:59:17
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /complier/src/main.cpp
+ */
+#include "ast.hpp"
 #include <iostream>
 #include <fstream>
-
-
-#include "../include/ast.hpp"
-
+using namespace std;
 
 int main(int argc,char*argv[])
 {
-
-    //c to python
-    //./bin/main --translate hello.c -o hello.py
+    //! c to python
+    //! ./bin/main --translate hello.c -o hello.py
     if (argc!=5)
     {
         fprintf(stderr, "Usage(1):bin/main --translate [source-file.c] -o [dest-file.py]\n");
@@ -20,25 +25,26 @@ int main(int argc,char*argv[])
     std::string out_filename = argv[4];
     std::string mode = argv[1];
 
-    //生成解析树
-    const Node* ast = parseAST(argv[2]);
+    const Node *ast=parseAST(argv[2]);
+    
 
-    //open dest file 
-    // fstream dest_file;
-    // dest_file.open(out_filename);
+    //freopen("tmpe_file/stderr.txt", "w", stderr);
 
+    //! open dest file 
+    fstream dest_file;
+    dest_file.open(out_filename,ios::out);
     //c to python
     if(mode == "--translate")
     {
-        //ast->translate(std::cout);
+        cout<<"in translate"<<endl;
+        TranslateContext context;
+        ast->translate(dest_file,context);
+        context.outmainfunc(dest_file);
     }
-    //./bin/c_compiler --print test/hello.c -o hello.py
-    if(mode == "--print")
-    {
-        ast->PrettyPrint(std::cout);
-    }
+
+
+    std::cout<<std::endl;
     //close file
-    // dest_file.close();
+    dest_file.close();
     return 0;
 }
-
