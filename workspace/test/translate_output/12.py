@@ -1,3 +1,4 @@
+
 def geo(n):
 	acc0=
 	tn=

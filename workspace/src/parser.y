@@ -339,8 +339,8 @@ JUMP_STATEMENT : T_K_GOTO T_ID T_FH     {$$=new JumpStatement($2,"goto");}
 PROGRAM : EXTERNAL_OBJECT           {$$=$1;}
         | PROGRAM EXTERNAL_OBJECT   {$$=new Program($1,$2);}
 
-EXTERNAL_OBJECT : FUNCTION    {$$=$1;}
-                | DECLARATION {$$=$1;}
+EXTERNAL_OBJECT :DECLARATION {$$=$1;}
+                | FUNCTION    {$$=$1;}
 
 FUNCTION : TYPE_PART DECLARATOR T_FH        {$$=new Function($1,$2);}
          | TYPE_PART DECLARATOR STATEMENTS  {$$=new Function($1,$2,$3);}
@@ -364,7 +364,7 @@ const Node *parseAST(char *filename)
     cerr<<"file can not open"<<endl;
     exit(-2);
   }
-  cout<<"work on it"<<endl;
+  // cout<<"work on it"<<endl;
   g_root=0;
   yyparse();
   return g_root;

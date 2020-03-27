@@ -1,0 +1,6781 @@
+
+
+=====test/compiler_tests/array/declare_global.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+x
+in BasicExpression
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in JumpStatement
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/array/declare_global_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/array/declare_local.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in ListDeclaration
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+y
+
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+in DeclaratorDirect
+x
+in BasicExpression
+
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:y
+in Assign
+=in BasicExpression
+in JumpStatement
+in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/array/declare_local_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/array/index_constant.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+in DeclaratorDirect
+x
+in BasicExpression
+
+in ExprStatement
+in AssignExpression
+in PostfixExpression
+expr
+in BasicExpression
+identify:x
+in BasicExpression
+in Assign
+=in BasicExpression
+in JumpStatement
+in PostfixExpression
+expr
+in BasicExpression
+identify:x
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/array/index_constant_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/array/index_expression.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in ListDeclaration
+in ListDeclaration
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+i
+
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+in DeclaratorDirect
+x
+in BasicExpression
+
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+acc
+
+in IterationStatement
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:i
+in Assign
+=in BasicExpression
+in ExprStatement
+in BinaryExpression
+in BasicExpression
+identify:i
+<in BasicExpression
+in PostfixExpression
+++
+in BasicExpression
+identify:i
+in Statements
+in ExprStatement
+in AssignExpression
+in PostfixExpression
+expr
+in BasicExpression
+identify:x
+in BinaryExpression
+in BasicExpression
+identify:i
+-in BasicExpression
+in Assign
+=in BasicExpression
+identify:i
+for
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:acc
+in Assign
+=in BasicExpression
+in IterationStatement
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:i
+in Assign
+=in BasicExpression
+in ExprStatement
+in BinaryExpression
+in BasicExpression
+identify:i
+<in BasicExpression
+in PostfixExpression
+++
+in BasicExpression
+identify:i
+in Statements
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:acc
+in Assign
+=in BinaryExpression
+in BasicExpression
+identify:acc
++in PostfixExpression
+expr
+in BasicExpression
+identify:x
+in BinaryExpression
+in BasicExpression
+identify:i
++in BasicExpression
+for
+in JumpStatement
+in BasicExpression
+identify:acc
+return
+
+
+
+
+
+=====test/compiler_tests/array/index_expression_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/array/index_variable.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in ListDeclaration
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+i
+
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+in DeclaratorDirect
+x
+in BasicExpression
+
+in IterationStatement
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:i
+in Assign
+=in BasicExpression
+in ExprStatement
+in BinaryExpression
+in BasicExpression
+identify:i
+<in BasicExpression
+in PostfixExpression
+++
+in BasicExpression
+identify:i
+in Statements
+in ExprStatement
+in AssignExpression
+in PostfixExpression
+expr
+in BasicExpression
+identify:x
+in BasicExpression
+identify:i
+in Assign
+=in BasicExpression
+identify:i
+for
+in JumpStatement
+in PostfixExpression
+expr
+in BasicExpression
+identify:x
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/array/index_variable_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/for_multiple.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in ListDeclaration
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+y
+
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:y
+in Assign
+=in BasicExpression
+in IterationStatement
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+in ExprStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+<in BasicExpression
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BinaryExpression
+in BasicExpression
+identify:x
++in BasicExpression
+in Statements
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:y
+in Assign
+=in BinaryExpression
+in BasicExpression
+identify:y
+-in BasicExpression
+for
+in JumpStatement
+in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/for_multiple_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in UnaryExpression
+in OprUnary
+-
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/for_one.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in IterationStatement
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+in ExprStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+<in BasicExpression
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BinaryExpression
+in BasicExpression
+identify:x
++in BasicExpression
+in Statements
+for
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:x
++in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/for_one_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/for_zero_v1.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in IterationStatement
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+in ExprStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+<in BasicExpression
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BinaryExpression
+in BasicExpression
+identify:x
++in BasicExpression
+in Statements
+in JumpStatement
+in BasicExpression
+return
+for
+in JumpStatement
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/for_zero_v1_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/for_zero_v2.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in IterationStatement
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+in ExprStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+<in BasicExpression
+in PostfixExpression
+++
+in BasicExpression
+identify:x
+in Statements
+in JumpStatement
+in BasicExpression
+return
+for
+in JumpStatement
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/for_zero_v2_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/if_else_false.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in SelectionStatement
+in BasicExpression
+in Statements
+in JumpStatement
+in BasicExpression
+return
+in Statements
+in JumpStatement
+in BasicExpression
+return
+ifelse
+
+
+
+
+
+=====test/compiler_tests/control_flow/if_else_false_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/if_else_true.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in SelectionStatement
+in BasicExpression
+in Statements
+in JumpStatement
+in BasicExpression
+return
+in Statements
+in JumpStatement
+in BasicExpression
+return
+ifelse
+
+
+
+
+
+=====test/compiler_tests/control_flow/if_else_true_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/if_false.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in SelectionStatement
+in BasicExpression
+in Statements
+in JumpStatement
+in BasicExpression
+return
+if
+in JumpStatement
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/if_false_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/if_true.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in SelectionStatement
+in BasicExpression
+in Statements
+in JumpStatement
+in BasicExpression
+return
+if
+in JumpStatement
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/if_true_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/sequence.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BinaryExpression
+in BasicExpression
+identify:x
++in BasicExpression
+identify:x
+in JumpStatement
+in BasicExpression
+identify:x
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/sequence_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/while_multiple.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+in IterationStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+>in BasicExpression
+in Statements
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BinaryExpression
+in BasicExpression
+identify:x
+-in BasicExpression
+while
+in JumpStatement
+in BasicExpression
+identify:x
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/while_multiple_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/while_once.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+in IterationStatement
+in BasicExpression
+identify:x
+in Statements
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+while
+in JumpStatement
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/while_once_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/while_zero.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in IterationStatement
+in BasicExpression
+in Statements
+while
+in JumpStatement
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/control_flow/while_zero_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/default/test_ADD0.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+a
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+b
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:a
++in BasicExpression
+identify:b
+return
+
+
+
+
+
+=====test/compiler_tests/default/test_ADD0_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in BasicExpression
+==in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/default/test_ADD1.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+a
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:a
++in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/default/test_ADD1_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in BasicExpression
+==in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/default/test_CALL.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in JumpStatement
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:g
+return
+
+
+
+
+
+=====test/compiler_tests/default/test_CALL_driver.c======
+work on it
+in program
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in Statements
+in JumpStatement
+in BasicExpression
+return
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in BasicExpression
+==in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+return
+
+
+
+
+
+=====test/compiler_tests/default/test_LOCAL.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+ffff
+in Statements
+in StatementSequence
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+in JumpStatement
+in BasicExpression
+identify:x
+return
+
+
+
+
+
+=====test/compiler_tests/default/test_LOCAL_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+ffff
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:ffff
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/default/test_RETURN.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in JumpStatement
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/default/test_RETURN_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in BasicExpression
+==in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+return
+
+
+
+
+
+=====test/compiler_tests/float/add.c======
+work on it
+in Function
+in RegularType
+float
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+float
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+float
+in DeclaratorDirect
+y
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:x
++in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/float/add_double.c======
+work on it
+in Function
+in RegularType
+double
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+double
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+double
+in DeclaratorDirect
+y
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:x
++in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/float/add_double_driver.c======
+work on it
+in program
+in Function
+in RegularType
+double
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+double
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+double
+in DeclaratorDirect
+y
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/float/add_driver.c======
+work on it
+
+
+
+
+=====test/compiler_tests/float/add_mul.c======
+work on it
+in Function
+in RegularType
+float
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in ListParameter
+in DeclarationParameter
+in RegularType
+float
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+float
+in DeclaratorDirect
+y
+in DeclarationParameter
+in RegularType
+float
+in DeclaratorDirect
+z
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:x
++in BinaryExpression
+in BasicExpression
+identify:y
+*in BasicExpression
+identify:z
+return
+
+
+
+
+
+=====test/compiler_tests/float/add_mul_driver.c======
+work on it
+
+
+
+
+=====test/compiler_tests/float/mul.c======
+work on it
+in Function
+in RegularType
+float
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+float
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+float
+in DeclaratorDirect
+y
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+*in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/float/mul_add.c======
+work on it
+in Function
+in RegularType
+float
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in ListParameter
+in DeclarationParameter
+in RegularType
+float
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+float
+in DeclaratorDirect
+y
+in DeclarationParameter
+in RegularType
+float
+in DeclaratorDirect
+z
+in Statements
+in JumpStatement
+in BinaryExpression
+in BinaryExpression
+in BasicExpression
+identify:x
+*in BasicExpression
+identify:y
++in BasicExpression
+identify:z
+return
+
+
+
+
+
+=====test/compiler_tests/float/mul_add_driver.c======
+work on it
+
+
+
+
+=====test/compiler_tests/float/mul_double.c======
+work on it
+in Function
+in RegularType
+double
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+double
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+double
+in DeclaratorDirect
+y
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+*in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/float/mul_double_driver.c======
+work on it
+in program
+in Function
+in RegularType
+double
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+double
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+double
+in DeclaratorDirect
+y
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/float/mul_driver.c======
+work on it
+
+
+
+
+=====test/compiler_tests/float/pow.c======
+work on it
+
+
+
+
+=====test/compiler_tests/float/pow_driver.c======
+work on it
+
+
+
+
+=====test/compiler_tests/functions/call_constant_external.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in JumpStatement
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:g
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_constant_external_driver.c======
+work on it
+in program
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in Statements
+in JumpStatement
+in BasicExpression
+return
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_constant_internal.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in Statements
+in JumpStatement
+in BasicExpression
+return
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in JumpStatement
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:g
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_constant_internal_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_five_args_external.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in ListParameter
+in ListParameter
+in ListParameter
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+a
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+b
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+c
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+d
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+e
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in JumpStatement
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:g
+in ArgList
+in ArgList
+in ArgList
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+,in BasicExpression
+,in BasicExpression
+,in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_five_args_external_driver.c======
+work on it
+in program
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in ListParameter
+in ListParameter
+in ListParameter
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+a
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+b
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+c
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+d
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+e
+in Statements
+in JumpStatement
+in BinaryExpression
+in BinaryExpression
+in BinaryExpression
+in BinaryExpression
+in BasicExpression
+identify:a
++in BasicExpression
+identify:b
++in BasicExpression
+identify:c
++in BasicExpression
+identify:d
++in BasicExpression
+identify:e
+return
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_five_args_internal.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in ListParameter
+in ListParameter
+in ListParameter
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+a
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+b
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+c
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+d
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+e
+in Statements
+in JumpStatement
+in BinaryExpression
+in BinaryExpression
+in BinaryExpression
+in BinaryExpression
+in BasicExpression
+identify:a
++in BasicExpression
+identify:b
++in BasicExpression
+identify:c
++in BasicExpression
+identify:d
++in BasicExpression
+identify:e
+return
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in JumpStatement
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:g
+in ArgList
+in ArgList
+in ArgList
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+,in BasicExpression
+,in BasicExpression
+,in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_five_args_internal_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_identity_external.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in JumpStatement
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:g
+in ArgList
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_identity_external_driver.c======
+work on it
+in program
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in Statements
+in JumpStatement
+in BasicExpression
+identify:x
+return
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_identity_internal.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in Statements
+in JumpStatement
+in BasicExpression
+identify:x
+return
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in JumpStatement
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:g
+in ArgList
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_identity_internal_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_mutual_recursive.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+r2
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+n
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+r1
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+n
+in Statements
+in SelectionStatement
+in BinaryExpression
+in BasicExpression
+identify:n
+==in BasicExpression
+in Statements
+in JumpStatement
+in BasicExpression
+return
+in Statements
+in JumpStatement
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:r2
+in ArgList
+in BinaryExpression
+in BasicExpression
+identify:n
+-in BasicExpression
++in PostfixExpression
+function call with args
+in BasicExpression
+identify:r2
+in ArgList
+in BinaryExpression
+in BasicExpression
+identify:n
+-in BasicExpression
+return
+ifelse
+
+
+
+
+
+=====test/compiler_tests/functions/call_mutual_recursive_driver.c======
+work on it
+in program
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+r1
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+n
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+r2
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+n
+in Statements
+in SelectionStatement
+in BinaryExpression
+in BasicExpression
+identify:n
+==in BasicExpression
+in Statements
+in JumpStatement
+in BasicExpression
+return
+in Statements
+in JumpStatement
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:r1
+in ArgList
+in BinaryExpression
+in BasicExpression
+identify:n
+-in BasicExpression
++in PostfixExpression
+function call with args
+in BasicExpression
+identify:r1
+in ArgList
+in BinaryExpression
+in BasicExpression
+identify:n
+-in BasicExpression
+return
+ifelse
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:r1
+in ArgList
+in BasicExpression
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_recursive_internal.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+n
+in Statements
+in StatementSequence
+in SelectionStatement
+in BinaryExpression
+in BasicExpression
+identify:n
+==in BasicExpression
+in Statements
+in JumpStatement
+in BasicExpression
+return
+if
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:n
++in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in BinaryExpression
+in BasicExpression
+identify:n
+-in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_recursive_internal_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+n
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in BasicExpression
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_two_args_external.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in JumpStatement
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:g
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_two_args_external_driver.c======
+work on it
+in program
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:x
++in BasicExpression
+identify:y
+return
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_two_args_internal.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:x
++in BasicExpression
+identify:y
+return
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in JumpStatement
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:g
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/functions/call_two_args_internal_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/integer/add.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:x
++in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/integer/add_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/integer/bitwise_and.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+&in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/integer/bitwise_and_driver.c======
+work on it
+
+
+
+
+=====test/compiler_tests/integer/bitwise_or.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Statements
+in StatementSequence
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+z
+
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:z
+in Assign
+=in BinaryExpression
+in BasicExpression
+identify:x
+|in BasicExpression
+identify:y
+in JumpStatement
+in BasicExpression
+identify:z
+return
+
+
+
+
+
+=====test/compiler_tests/integer/bitwise_or_driver.c======
+work on it
+
+
+
+
+=====test/compiler_tests/integer/bitwise_xor.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+^in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/integer/bitwise_xor_driver.c======
+work on it
+
+
+
+
+=====test/compiler_tests/integer/div.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+/in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/integer/div_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/integer/equal.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+==in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/integer/equal_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in SelectionStatement
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+!=in BasicExpression
+in JumpStatement
+in BasicExpression
+return
+if
+in SelectionStatement
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+!=in BasicExpression
+in JumpStatement
+in BasicExpression
+return
+if
+in SelectionStatement
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+!=in BasicExpression
+in JumpStatement
+in BasicExpression
+return
+if
+in SelectionStatement
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in UnaryExpression
+in OprUnary
+-
+in BasicExpression
+,in BasicExpression
+!=in BasicExpression
+in JumpStatement
+in BasicExpression
+return
+if
+in SelectionStatement
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in UnaryExpression
+in OprUnary
+-
+in BasicExpression
+!=in BasicExpression
+in JumpStatement
+in BasicExpression
+return
+if
+in SelectionStatement
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+!=in BasicExpression
+in JumpStatement
+in BasicExpression
+return
+if
+in JumpStatement
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/integer/less_than.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+<in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/integer/less_than_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in SelectionStatement
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+!=in BasicExpression
+in JumpStatement
+in BasicExpression
+return
+if
+in SelectionStatement
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+!=in BasicExpression
+in JumpStatement
+in BasicExpression
+return
+if
+in SelectionStatement
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+!=in BasicExpression
+in JumpStatement
+in BasicExpression
+return
+if
+in SelectionStatement
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in UnaryExpression
+in OprUnary
+-
+in BasicExpression
+,in BasicExpression
+!=in BasicExpression
+in JumpStatement
+in BasicExpression
+return
+if
+in SelectionStatement
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in UnaryExpression
+in OprUnary
+-
+in BasicExpression
+!=in BasicExpression
+in JumpStatement
+in BasicExpression
+return
+if
+in JumpStatement
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/integer/less_than_equal.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Statements
+in StatementSequence
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+z
+
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:z
+in Assign
+=in BinaryExpression
+in BasicExpression
+identify:x
+<=in BasicExpression
+identify:y
+in JumpStatement
+in BasicExpression
+identify:z
+return
+
+
+
+
+
+=====test/compiler_tests/integer/less_than_equal_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in SelectionStatement
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+!=in BasicExpression
+in JumpStatement
+in BasicExpression
+return
+if
+in SelectionStatement
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+!=in BasicExpression
+in JumpStatement
+in BasicExpression
+return
+if
+in SelectionStatement
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+!=in BasicExpression
+in JumpStatement
+in BasicExpression
+return
+if
+in SelectionStatement
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in UnaryExpression
+in OprUnary
+-
+in BasicExpression
+,in BasicExpression
+!=in BasicExpression
+in JumpStatement
+in BasicExpression
+return
+if
+in SelectionStatement
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in UnaryExpression
+in OprUnary
+-
+in BasicExpression
+!=in BasicExpression
+in JumpStatement
+in BasicExpression
+return
+if
+in JumpStatement
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/integer/logical_and.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+&&in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/integer/logical_and_driver.c======
+work on it
+
+
+
+
+=====test/compiler_tests/integer/logical_or.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+||in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/integer/logical_or_driver.c======
+work on it
+
+
+
+
+=====test/compiler_tests/integer/mul.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+*in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/integer/mul_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/integer/sub.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Statements
+in StatementSequence
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+z
+
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:z
+in Assign
+=in BinaryExpression
+in BasicExpression
+identify:x
+-in BasicExpression
+identify:y
+in JumpStatement
+in BasicExpression
+identify:z
+return
+
+
+
+
+
+=====test/compiler_tests/integer/sub_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+==in UnaryExpression
+in OprUnary
+-
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/local_var/constant_initialiser.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+in BasicExpression
+=
+in JumpStatement
+in BasicExpression
+identify:x
+return
+
+
+
+
+
+=====test/compiler_tests/local_var/constant_initialiser_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/local_var/dual_var.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in ListDeclaration
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+y
+
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:y
+in Assign
+=in BasicExpression
+identify:x
+in JumpStatement
+in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/local_var/dual_var_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/local_var/expression_initialiser.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in ListDeclaration
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+y
+in BasicExpression
+=
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+in BinaryExpression
+in BasicExpression
++in BasicExpression
+identify:y
+=
+in JumpStatement
+in BasicExpression
+identify:x
+return
+
+
+
+
+
+=====test/compiler_tests/local_var/expression_initialiser_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/local_var/identity.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in Statements
+in JumpStatement
+in BasicExpression
+identify:x
+return
+
+
+
+
+
+=====test/compiler_tests/local_var/identity_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in BasicExpression
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/local_var/return_constant.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in JumpStatement
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/local_var/return_constant_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/local_var/scoped_var.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+in Statements
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+in JumpStatement
+in BasicExpression
+identify:x
+return
+
+
+
+
+
+=====test/compiler_tests/local_var/scoped_var_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/local_var/single_var.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+in JumpStatement
+in BasicExpression
+identify:x
+return
+
+
+
+
+
+=====test/compiler_tests/local_var/single_var_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/misc/enum1.c======
+work on it
+in program
+in Declaration
+in SpecifierEnum
+in SpecifierEnum
+vv
+X
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:vv
++in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/misc/enum1_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:g
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/misc/enum2.c======
+work on it
+in program
+in Declaration
+in SpecifierEnum
+in ListEnumerator
+in SpecifierEnum
+in BasicExpression
+vv
+in SpecifierEnum
+in BasicExpression
+yy
+X
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in Statements
+in JumpStatement
+in BinaryExpression
+in BasicExpression
+identify:vv
++in BasicExpression
+identify:yy
+return
+
+
+
+
+
+=====test/compiler_tests/misc/enum2_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:g
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/misc/switch1.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in Statements
+in SelectionStatement
+in BasicExpression
+identify:x
+in Statements
+in StatementSequence
+in CaseStatement
+in JumpStatement
+in BasicExpression
+return
+in JumpStatement
+in BasicExpression
+return
+case
+in CaseStatement
+in JumpStatement
+in BasicExpression
+return
+in JumpStatement
+in BasicExpression
+return
+case
+switch
+
+
+
+
+
+=====test/compiler_tests/misc/switch1_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:g
+in ArgList
+in BasicExpression
++in PostfixExpression
+function call with args
+in BasicExpression
+identify:g
+in ArgList
+in BasicExpression
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/misc/switch2.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+t
+in Statements
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+in SelectionStatement
+in BasicExpression
+identify:t
+in Statements
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in CaseStatement
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+case
+in JumpStatement
+break
+in CaseStatement
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+case
+in CaseStatement
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BinaryExpression
+in BasicExpression
+identify:x
++in BasicExpression
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BinaryExpression
+in BasicExpression
+identify:x
++in BasicExpression
+case
+in JumpStatement
+break
+in CaseStatement
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BinaryExpression
+in BasicExpression
+identify:t
++in BasicExpression
+default
+switch
+in JumpStatement
+in BasicExpression
+identify:x
+return
+
+
+
+
+
+=====test/compiler_tests/misc/switch2_driver.c======
+work on it
+
+
+
+
+=====test/compiler_tests/misc/typedef1.c======
+work on it
+
+
+
+
+=====test/compiler_tests/misc/typedef1_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:g
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/misc/typedef2.c======
+work on it
+
+
+
+
+=====test/compiler_tests/misc/typedef2_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in RegularType
+int
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:g
+in ArgList
+in BasicExpression
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/pointer/addressof.c======
+work on it
+*
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in ListDeclaration
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in Declaration
+in RegularType
+int
+in Term
+in Declarator
+in Pointer
+in DeclaratorDirect
+y
+in UnaryExpression
+in OprUnary
+&
+in BasicExpression
+identify:x
+=
+in JumpStatement
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/pointer/addressof_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/pointer/arithmetic.c======
+work on it
+*
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in DeclarationParameter
+in RegularType
+int
+in Declarator
+in Pointer
+in DeclaratorDirect
+p
+in Statements
+in StatementSequence
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:p
+in Assign
+=in BinaryExpression
+in BasicExpression
+identify:p
++in BasicExpression
+in JumpStatement
+in UnaryExpression
+in OprUnary
+*
+in BasicExpression
+identify:p
+return
+
+
+
+
+
+=====test/compiler_tests/pointer/arithmetic_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in StatementSequence
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+in DeclaratorDirect
+x
+in BasicExpression
+
+in ExprStatement
+in AssignExpression
+in PostfixExpression
+expr
+in BasicExpression
+identify:x
+in BasicExpression
+in Assign
+=in BasicExpression
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in BasicExpression
+identify:x
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/pointer/assign.c======
+work on it
+*
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in ListDeclaration
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in Declaration
+in RegularType
+int
+in Term
+in Declarator
+in Pointer
+in DeclaratorDirect
+y
+in UnaryExpression
+in OprUnary
+&
+in BasicExpression
+identify:x
+=
+in ExprStatement
+in AssignExpression
+in UnaryExpression
+in OprUnary
+*
+in BasicExpression
+identify:y
+in Assign
+=in BasicExpression
+in JumpStatement
+in BasicExpression
+identify:x
+return
+
+
+
+
+
+=====test/compiler_tests/pointer/assign_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/pointer/dereference.c======
+work on it
+*
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in ListDeclaration
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in Declaration
+in RegularType
+int
+in Term
+in Declarator
+in Pointer
+in DeclaratorDirect
+y
+in UnaryExpression
+in OprUnary
+&
+in BasicExpression
+identify:x
+=
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BasicExpression
+in JumpStatement
+in UnaryExpression
+in OprUnary
+*
+in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/pointer/dereference_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/pointer/index.c======
+work on it
+*
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in DeclarationParameter
+in RegularType
+int
+in Declarator
+in Pointer
+in DeclaratorDirect
+p
+in Statements
+in JumpStatement
+in PostfixExpression
+expr
+in BasicExpression
+identify:p
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/pointer/index_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in StatementSequence
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+in DeclaratorDirect
+x
+in BasicExpression
+
+in ExprStatement
+in AssignExpression
+in PostfixExpression
+expr
+in BasicExpression
+identify:x
+in BasicExpression
+in Assign
+=in BasicExpression
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:f
+in ArgList
+in BasicExpression
+identify:x
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/programs/fibonacci.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+fib
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in Statements
+in StatementSequence
+in StatementSequence
+in SelectionStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+<=in BasicExpression
+in Statements
+in JumpStatement
+in BasicExpression
+return
+if
+in SelectionStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+==in BasicExpression
+in Statements
+in JumpStatement
+in BasicExpression
+return
+if
+in JumpStatement
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:fib
+in ArgList
+in BinaryExpression
+in BasicExpression
+identify:x
+-in BasicExpression
++in PostfixExpression
+function call with args
+in BasicExpression
+identify:fib
+in ArgList
+in BinaryExpression
+in BasicExpression
+identify:x
+-in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/programs/fibonacci_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+fib
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:fib
+in ArgList
+in BasicExpression
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/programs/multiply.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+multiply
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Statements
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+acc
+in BasicExpression
+=
+in SelectionStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+<in BasicExpression
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+-
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:multiply
+in ArgList
+in ArgList
+in UnaryExpression
+in OprUnary
+-
+in BasicExpression
+identify:x
+,in BasicExpression
+identify:y
+return
+if
+in IterationStatement
+in BinaryExpression
+in BasicExpression
+identify:x
+>in BasicExpression
+in Statements
+in StatementSequence
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:acc
+in Assign
++=in BasicExpression
+identify:y
+in ExprStatement
+in PostfixExpression
+--
+in BasicExpression
+identify:x
+while
+in JumpStatement
+in BasicExpression
+identify:acc
+return
+
+
+
+
+
+=====test/compiler_tests/programs/multiply_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+multiply
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+y
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:multiply
+in ArgList
+in ArgList
+in UnaryExpression
+in OprUnary
+-
+in BasicExpression
+,in BasicExpression
+==in UnaryExpression
+in OprUnary
+-
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/programs/sqrt.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+bsqrt
+in ListParameter
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+lo
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+hi
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+val
+in Statements
+in StatementSequence
+in IterationStatement
+in BinaryExpression
+in BinaryExpression
+in BasicExpression
+identify:lo
++in BasicExpression
+<in BasicExpression
+identify:hi
+in Statements
+in StatementSequence
+in ListDeclaration
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+mid
+in BinaryExpression
+in BasicExpression
+in BinaryExpression
+in BasicExpression
+identify:lo
++in BasicExpression
+identify:hi
+>>in BasicExpression
+=
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+sqr
+in BinaryExpression
+in BasicExpression
+identify:mid
+*in BasicExpression
+identify:mid
+=
+in SelectionStatement
+in BinaryExpression
+in BasicExpression
+identify:sqr
+<=in BasicExpression
+identify:val
+in Statements
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:lo
+in Assign
+=in BasicExpression
+identify:mid
+in Statements
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:hi
+in Assign
+=in BasicExpression
+identify:mid
+ifelse
+while
+in SelectionStatement
+in BinaryExpression
+in BinaryExpression
+in BasicExpression
+identify:lo
+*in BasicExpression
+identify:lo
+<in BasicExpression
+identify:val
+in Statements
+in JumpStatement
+in BasicExpression
+identify:hi
+return
+in Statements
+in JumpStatement
+in BasicExpression
+identify:lo
+return
+ifelse
+
+
+
+
+
+=====test/compiler_tests/programs/sqrt_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+bsqrt
+in ListParameter
+in ListParameter
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+lo
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+hi
+in DeclarationParameter
+in RegularType
+int
+in DeclaratorDirect
+v
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:bsqrt
+in ArgList
+in ArgList
+in ArgList
+in BasicExpression
+,in BasicExpression
+,in BasicExpression
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/strings/chliteral.c======
+work on it
+
+
+
+
+=====test/compiler_tests/strings/chliteral_driver.c======
+work on it
+
+
+
+
+=====test/compiler_tests/strings/escaped.c======
+work on it
+*
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in Statements
+in StatementSequence
+in Declaration
+in RegularType
+char
+in Term
+in Declarator
+in Pointer
+in DeclaratorDirect
+x
+in BasicExpression
+string literal:"\\"
+=
+in JumpStatement
+in PostfixExpression
+expr
+in BasicExpression
+identify:x
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/strings/escaped_driver.c======
+work on it
+
+
+
+
+=====test/compiler_tests/strings/literal.c======
+work on it
+*
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in Statements
+in StatementSequence
+in Declaration
+in RegularType
+char
+in Term
+in Declarator
+in Pointer
+in DeclaratorDirect
+x
+in BasicExpression
+string literal:"hello"
+=
+in JumpStatement
+in PostfixExpression
+expr
+in BasicExpression
+identify:x
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/strings/literal_driver.c======
+work on it
+
+
+
+
+=====test/compiler_tests/strings/puts.c======
+work on it
+*
+in program
+in Function
+in RegularType
+void
+in DeclaratorDirect
+in DeclaratorDirect
+fakeputs
+in DeclarationParameter
+in RegularType
+char
+in Declarator
+in Pointer
+in DeclaratorDirect
+x
+in Function
+in RegularType
+void
+in DeclaratorDirect
+in DeclaratorDirect
+g
+in Statements
+in ExprStatement
+in PostfixExpression
+function call with args
+in BasicExpression
+identify:fakeputs
+in ArgList
+in BasicExpression
+string literal:"wibble"
+
+
+
+
+
+=====test/compiler_tests/strings/puts_driver.c======
+work on it
+
+
+
+
+=====test/compiler_tests/strings/search.c======
+work on it
+*
+*
+in Function
+in RegularType
+char
+in Declarator
+in Pointer
+in DeclaratorDirect
+in DeclaratorDirect
+search
+in ListParameter
+in DeclarationParameter
+in RegularType
+char
+in Declarator
+in Pointer
+in DeclaratorDirect
+x
+in DeclarationParameter
+in RegularType
+char
+in DeclaratorDirect
+c
+in Statements
+in StatementSequence
+in IterationStatement
+in UnaryExpression
+in OprUnary
+*
+in BasicExpression
+identify:x
+in Statements
+in StatementSequence
+in SelectionStatement
+in BinaryExpression
+in UnaryExpression
+in OprUnary
+*
+in BasicExpression
+identify:x
+==in BasicExpression
+identify:c
+in Statements
+in JumpStatement
+in BasicExpression
+identify:x
+return
+if
+in ExprStatement
+in AssignExpression
+in BasicExpression
+identify:x
+in Assign
+=in BinaryExpression
+in BasicExpression
+identify:x
++in BasicExpression
+while
+in JumpStatement
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/strings/search_driver.c======
+work on it
+*
+*
+*
+*
+*
+
+
+
+
+=====test/compiler_tests/struct/sizeof.c======
+work on it
+in program
+in Declaration
+in StructUnionType
+in RegularType
+struct
+in StructUnionDeclaration
+in RegularType
+int
+in DeclaratorDirect
+y
+x
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in Declaration
+in StructUnionType
+in RegularType
+struct
+x
+in Term
+in DeclaratorDirect
+y
+
+in JumpStatement
+in UnaryExpression
+sizeofin BasicExpression
+in BasicExpression
+identify:y
+return
+
+
+
+
+
+=====test/compiler_tests/struct/sizeof_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/struct/struct_inst.c======
+work on it
+in program
+in Declaration
+in StructUnionType
+in RegularType
+struct
+in StructUnionDeclaration
+in RegularType
+int
+in DeclaratorDirect
+y
+x
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in Declaration
+in StructUnionType
+in RegularType
+struct
+x
+in Term
+in DeclaratorDirect
+y
+
+in JumpStatement
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/struct/struct_inst_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/struct/struct_member_get.c======
+work on it
+in program
+in Declaration
+in StructUnionType
+in RegularType
+struct
+in StructUnionDeclaration
+in RegularType
+int
+in DeclaratorDirect
+y
+x
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in Declaration
+in StructUnionType
+in RegularType
+struct
+x
+in Term
+in DeclaratorDirect
+z
+
+in ExprStatement
+in AssignExpression
+in PostfixExpression
+dot
+in BasicExpression
+identify:z
+.y
+in Assign
+=in BasicExpression
+in JumpStatement
+in PostfixExpression
+dot
+in BasicExpression
+identify:z
+.y
+return
+
+
+
+
+
+=====test/compiler_tests/struct/struct_member_get_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/struct/struct_member_set.c======
+work on it
+in program
+in Declaration
+in StructUnionType
+in RegularType
+struct
+in StructUnionDeclaration
+in RegularType
+int
+in DeclaratorDirect
+y
+x
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in Declaration
+in StructUnionType
+in RegularType
+struct
+x
+in Term
+in DeclaratorDirect
+z
+
+in ExprStatement
+in AssignExpression
+in PostfixExpression
+dot
+in BasicExpression
+identify:z
+.y
+in Assign
+=in BasicExpression
+in JumpStatement
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/struct/struct_member_set_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/struct/struct_two_members.c======
+work on it
+in program
+in Declaration
+in StructUnionType
+in RegularType
+struct
+in StructUnionList
+in StructUnionDeclaration
+in RegularType
+int
+in DeclaratorDirect
+y
+in StructUnionDeclaration
+in RegularType
+int
+in DeclaratorDirect
+z
+x
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in StatementSequence
+in StatementSequence
+in Declaration
+in StructUnionType
+in RegularType
+struct
+x
+in Term
+in DeclaratorDirect
+g
+
+in ExprStatement
+in AssignExpression
+in PostfixExpression
+dot
+in BasicExpression
+identify:g
+.y
+in Assign
+=in BasicExpression
+in ExprStatement
+in AssignExpression
+in PostfixExpression
+dot
+in BasicExpression
+identify:g
+.z
+in Assign
+=in BasicExpression
+in JumpStatement
+in BinaryExpression
+in PostfixExpression
+dot
+in BasicExpression
+identify:g
+.y
++in PostfixExpression
+dot
+in BasicExpression
+identify:g
+.z
+return
+
+
+
+
+
+=====test/compiler_tests/struct/struct_two_members_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/types/sizeof_char_inst.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in Declaration
+in RegularType
+char
+in Term
+in DeclaratorDirect
+x
+
+in JumpStatement
+in UnaryExpression
+sizeofin BasicExpression
+in BasicExpression
+identify:x
+return
+
+
+
+
+
+=====test/compiler_tests/types/sizeof_char_inst_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/types/sizeof_char_type.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in JumpStatement
+in UnaryExpression
+sizeofin RegularType
+char
+return
+
+
+
+
+
+=====test/compiler_tests/types/sizeof_char_type_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/types/sizeof_int_inst.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in StatementSequence
+in Declaration
+in RegularType
+int
+in Term
+in DeclaratorDirect
+x
+
+in JumpStatement
+in UnaryExpression
+sizeofin BasicExpression
+in BasicExpression
+identify:x
+return
+
+
+
+
+
+=====test/compiler_tests/types/sizeof_int_inst_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/types/sizeof_int_type.c======
+work on it
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in JumpStatement
+in UnaryExpression
+sizeofin RegularType
+int
+return
+
+
+
+
+
+=====test/compiler_tests/types/sizeof_int_type_driver.c======
+work on it
+in program
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/types/unsigned.c======
+work on it
+in Function
+in RegularType
+unsigned
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Statements
+in JumpStatement
+in BasicExpression
+return
+
+
+
+
+
+=====test/compiler_tests/types/unsigned_driver.c======
+work on it
+in program
+in Function
+in RegularType
+unsigned
+in DeclaratorDirect
+in DeclaratorDirect
+f
+in Function
+in RegularType
+int
+in DeclaratorDirect
+in DeclaratorDirect
+main
+in Statements
+in JumpStatement
+in UnaryExpression
+in OprUnary
+!
+in BasicExpression
+in BinaryExpression
+in PostfixExpression
+funciton call with no args
+in BasicExpression
+identify:f
+==in BasicExpression
+return
+
+
+
+

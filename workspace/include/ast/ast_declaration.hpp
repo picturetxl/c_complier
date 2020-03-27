@@ -32,8 +32,10 @@ class Declaration : public Node
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const
         {
-            cerr<<"in Declaration"<<endl;
+            // cout<<"in Declaration"<<endl;
             context.indent_output(dst);
+            // context.turn_on_in_declaration_flag();
+            // context.local=true;
             node1->translate(dst,context);
             if(node2)
             {
@@ -44,6 +46,8 @@ class Declaration : public Node
             {
                 dst<<endl;
             }
+            // context.local=false;
+            // context.shutdown_in_declaration_flag();
         }
         virtual double evaluate(
             const std::map<std::string,double> &bindings
@@ -112,7 +116,7 @@ class TermList : public Node
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const
         {
-            cerr<<"in TermList"<<endl;
+            // cout<<"in TermList"<<endl;
             node1->translate(dst,context);
             dst<<",";
             node2->translate(dst,context);
@@ -152,12 +156,13 @@ class Term : public Node
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const
         {
-            cerr<<"in Term"<<endl;
+            // cout<<"in Term"<<endl;
             node1->translate(dst,context);
             if(node2)
             {
                 node2->translate(dst,context);
             }
+
             dst<<type;
         }
         virtual double evaluate(
@@ -230,11 +235,30 @@ class RegularType : public Node
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const
         {
-            cerr<<"in RegularType"<<endl;
-            if(context.get_arglist_flag() || context.is_inside_function())
-                dst<<"";
-            else
+            // cout<<"in RegularType"<<endl;
+            if(context.return_type)
+            {
                 dst<<"def ";
+            }
+            dst<<"";
+            // if(context.global)
+            // {
+            //     dst<<"";
+            // }
+
+            // if()
+            // if(context.is_inside_function())
+            // {
+            //     cout<<"local:"<<context.local<<endl;
+            // }
+            // if(context.get_arglist_flag())
+            // {
+            //     cout<<"arglist:"<<endl;
+            // }
+            // else
+            //     dst<<"def ";
+            
+           
         }
         virtual double evaluate(
             const std::map<std::string,double> &bindings
@@ -682,18 +706,54 @@ class DeclaratorDirect : public Node
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const
         {
-            cerr<<"in DeclaratorDirect"<<endl;
+            // cout<<"in DeclaratorDirect"<<endl;
             if(id)
             {
-                dst<<*id;
                 if(*id == "main")
                 {
                     context.setMain();
                 }
-                else
+                // if(context.global==true)
+                // {
+                //     context.globalVar.push_back(*id);
+                //     cout<<"----get_declaration_flag"<<endl;
+                // }
+                // else if(context.local)
+                // {
+                //     dst<<"";
+                // }
+                // else
+                // {
+                //     if(context.is_inside_function()==true)
+                //     {
+                //         dst<<"";
+                //     }
+                //     else
+                //     {
+                        
+                //         dst<<*id;
+                //     }
+               
+                // }
+                if(context.global)
                 {
-                    cerr<<"id:"<<*id<<endl;
+                    context.globalVar.push_back(*id);
+                    dst<<*id;
                 }
+                if(context.arglist)
+                {
+                    dst<<*id;
+                }
+                if(context.return_type)
+                {
+                    dst<<*id;
+                }
+                if(context.local)
+                {
+                    dst<<"";
+                }
+               
+              
             }
             if(node1!=nullptr && node2==nullptr)
             {
@@ -751,7 +811,7 @@ class Pointer : public Node
         {}
         Pointer()
         {
-            cerr<<"*"<<endl;
+            cout<<"*"<<endl;
         }
         Pointer(NodePtr arg1)
             :node1(arg1),node2(nullptr){}
@@ -872,7 +932,7 @@ class ListParameter : public Node
         }
         virtual void translate(std::ostream &dst,TranslateContext &context) const
         {
-            cerr<<"in ListParameter"<<endl;
+            // cout<<"in ListParameter"<<endl;
             node1->translate(dst,context);
             dst<<",";
             node2->translate(dst,context);
@@ -910,7 +970,7 @@ class DeclarationParameter : public Node
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const
         {
-            cerr<<"in DeclarationParameter"<<endl;
+            // cout<<"in DeclarationParameter"<<endl;
             node1->translate(dst,context);
             node2->translate(dst,context);
         }
@@ -954,7 +1014,7 @@ class ListIdentifier : public Node
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const
         {
-            cerr<<"in ListIdentifier"<<endl;
+            // cout<<"in ListIdentifier"<<endl;
             if(node1)
             {
                 node1->translate(dst,context);
@@ -999,7 +1059,7 @@ class Type : public Node
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const
         {
-            cerr<<"in Type"<<endl;
+            // cout<<"in Type"<<endl;
             node1->translate(dst,context);
             node2->translate(dst,context);
         }
@@ -1088,7 +1148,7 @@ class DeclarationDirectAbstract : public Node
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const
         {
-            cerr<<"in DeclarationDirectAbstract"<<endl;
+            // cout<<"in DeclarationDirectAbstract"<<endl;
             if(type=="[]" || type == "[r]")
             {
                 throw std::runtime_error("Python Not supported.");
@@ -1149,7 +1209,7 @@ class Initializer : public Node
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const
         {
-            cerr<<"in Initializer"<<endl;
+            // cout<<"in Initializer"<<endl;
             if(type == "()")
             {
                 dst<<"(";
@@ -1197,7 +1257,7 @@ class ListInitializer : public Node
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const
         {
-            cerr<<"in ListInitializer"<<endl;
+            // cout<<"in ListInitializer"<<endl;
             node1->print(dst);
             if(node2)
             {

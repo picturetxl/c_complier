@@ -664,8 +664,8 @@ static const yytype_int16 yypact[] =
 static const yytype_uint8 yydefact[] =
 {
        0,    93,   104,    96,    95,    87,    89,    88,    90,    91,
-      92,    94,    97,    98,   105,     0,   125,   126,     0,   203,
-       0,    77,    79,    99,     0,   100,    81,     2,   200,   202,
+      92,    94,    97,    98,   105,     0,   125,   126,     0,   202,
+       0,    77,    79,    99,     0,   100,    81,     2,   200,   203,
      120,     0,     1,   129,     0,    75,   136,     0,    83,    85,
      128,     0,    78,    80,   103,     0,    82,   201,     0,   123,
        0,   121,     0,   140,   138,   137,    76,     0,     0,   204,
@@ -3226,7 +3226,7 @@ const Node *parseAST(char *filename)
     cerr<<"file can not open"<<endl;
     exit(-2);
   }
-  cout<<"work on it"<<endl;
+  // cout<<"work on it"<<endl;
   g_root=0;
   yyparse();
   return g_root;

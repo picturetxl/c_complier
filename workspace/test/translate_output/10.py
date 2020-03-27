@@ -1,3 +1,4 @@
+
 def function(aa,b):
 	if(aa<b):		
 		aa=aa-1

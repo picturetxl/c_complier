@@ -194,3 +194,163 @@ graph LR
 
 ## 3. 代码生成阶段 Code generation
 
+
+
+
+
+
+
+
+
+## MIPS
+
+
+
+> mips 主要被分成五个部分:
+>
+> 1. Load and Store
+> 2. ALU
+> 3. Jump and Branch
+> 4. Miscellaneous
+> 5. Coprocessor
+
+
+
+### 寄存器Register
+
+> 函数中的临时变量s和t 
+>
+> 
+
+![image-20200326093208402](Readme.assets/image-20200326093208402.png)
+
+
+
+![image-20200326093230174](Readme.assets/image-20200326093230174.png)
+
+
+
+### Load and Store
+
+
+
+![image-20200326092436959](Readme.assets/image-20200326092436959.png)
+
+
+
+![image-20200326092533308](Readme.assets/image-20200326092533308.png)
+
+
+
+![image-20200326092613008](Readme.assets/image-20200326092613008.png)
+
+
+
+![image-20200326092623539](Readme.assets/image-20200326092623539.png)
+
+
+
+![image-20200326092628653](Readme.assets/image-20200326092628653.png)
+
+
+
+
+
+
+
+
+
+
+
+### ALU
+
+
+
+![image-20200326092646877](Readme.assets/image-20200326092646877.png)
+
+
+
+![image-20200326092654466](Readme.assets/image-20200326092654466.png)
+
+
+
+
+
+![image-20200326092703307](Readme.assets/image-20200326092703307.png)
+
+
+
+
+
+![image-20200326092711898](Readme.assets/image-20200326092711898.png)
+
+
+
+
+
+### Jump and Branch
+
+
+
+![image-20200326092741849](Readme.assets/image-20200326092741849.png)
+
+
+
+![image-20200326092746882](Readme.assets/image-20200326092746882.png)
+
+
+
+![image-20200326092751456](Readme.assets/image-20200326092751456.png)
+
+
+
+![image-20200326092759262](Readme.assets/image-20200326092759262.png)
+
+
+
+
+
+
+
+### Miscellaneous
+
+![image-20200326092812612](Readme.assets/image-20200326092812612.png)
+
+
+
+
+
+![image-20200326092817995](Readme.assets/image-20200326092817995.png)
+
+
+
+
+
+![image-20200326092824530](Readme.assets/image-20200326092824530.png)
+
+
+
+
+
+![image-20200326092832871](Readme.assets/image-20200326092832871.png)
+
+
+
+![image-20200326092841411](Readme.assets/image-20200326092841411.png)
+
+
+
+
+
+![image-20200326092848837](Readme.assets/image-20200326092848837.png)
+
+
+
+![image-20200326092855089](Readme.assets/image-20200326092855089.png)
+
+
+
+
+
+### Coprocessor
+

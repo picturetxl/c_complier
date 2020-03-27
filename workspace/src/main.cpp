@@ -27,21 +27,18 @@ int main(int argc,char*argv[])
 
     const Node *ast=parseAST(argv[2]);
     
-
-    //freopen("tmpe_file/stderr.txt", "w", stderr);
-
     //! open dest file 
     fstream dest_file;
     dest_file.open(out_filename,ios::out);
+
     //c to python
     if(mode == "--translate")
     {
-        cout<<"in translate"<<endl;
+        // cout<<"in translate"<<endl;
         TranslateContext context;
         ast->translate(dest_file,context);
         context.outmainfunc(dest_file);
     }
-
 
     std::cout<<std::endl;
     //close file

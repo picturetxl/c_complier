@@ -88,7 +88,7 @@ class BasicExpression : public Expression
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const override
         {
-            cerr<<"in BasicExpression"<<endl;
+            // cout<<"in BasicExpression"<<endl;
             if(flag == 0)
             {
                 if(type == "int")
@@ -204,7 +204,7 @@ class PostfixExpression : public Expression
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const override
         {
-            cerr<<"in PostfixExpression"<<endl;
+            // cout<<"in PostfixExpression"<<endl;
             if(type == "++")
             {
                 node1->translate(dst,context);
@@ -279,7 +279,7 @@ class ArgList : public Expression
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const override
         {
-            cerr<<"in ArgList"<<endl;
+            // cout<<"in ArgList"<<endl;
             context.turn_on_in_arglist_flag();
             node1->translate(dst,context);
             if(node2!=nullptr)
@@ -347,7 +347,7 @@ class UnaryExpression : public Expression
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const override
         {
-            cerr<<"in UnaryExpression"<<endl;
+            // cout<<"in UnaryExpression"<<endl;
             if(type == "++")
             {
                 context.indent_output(dst);
@@ -403,7 +403,7 @@ class OprUnary : public Expression
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const override
         {
-            cerr<<"in OprUnary"<<endl;
+            // cout<<"in OprUnary"<<endl;
             dst<<type;
         }
 
@@ -437,7 +437,7 @@ class CastExpr : public Expression
         }
         virtual void translate(std::ostream &dst,TranslateContext &context) const override
         {
-            cerr<<"in CastExpr"<<endl;
+            // cout<<"in CastExpr"<<endl;
             dst<<"(";
             node1->translate(dst,context);
             dst<<")";
@@ -516,7 +516,7 @@ class BinaryExpression : public Expression
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const override
         {
-            cerr<<"in BinaryExpression"<<endl;
+            // cout<<"in BinaryExpression"<<endl;
             // context.indent_output(dst);
             node1->translate(dst,context);
             dst<<type;
@@ -554,7 +554,7 @@ class ConditionExpr : public Expression
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const override
         {
-            cerr<<"in ConditionExpr"<<endl;
+            // cout<<"in ConditionExpr"<<endl;
             node1->translate(dst,context);
             dst<<"?";
             node2->translate(dst,context);
@@ -594,7 +594,7 @@ class AssignExpression : public Expression
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const override
         {
-            cerr<<"in AssignExpression"<<endl;
+            // cout<<"in AssignExpression"<<endl;
             node1->translate(dst,context);
             node2->translate(dst,context);
             node3->translate(dst,context);
@@ -632,7 +632,7 @@ class Assign : public Expression
         }
         virtual void translate(std::ostream &dst,TranslateContext &context) const override
         {
-            cerr<<"in Assign"<<endl;
+            // cout<<"in Assign"<<endl;
             dst<<type;
         }
 
@@ -665,7 +665,7 @@ class Expr : public Expression
         }
         virtual void translate(std::ostream &dst,TranslateContext&context) const override
         {
-            cerr<<"in Expr"<<endl;
+            // cout<<"in Expr"<<endl;
             node1->translate(dst,context);
             dst<<",";
             node2->translate(dst,context);

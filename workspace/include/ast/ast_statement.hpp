@@ -100,7 +100,7 @@ public:
     }
     virtual void translate(std::ostream &dst,TranslateContext&context) const
     {
-        cerr<<"in Statements"<<endl;
+        // cout<<"in Statements"<<endl;
         dst<<endl;
         if(node)
         {
@@ -139,7 +139,7 @@ public:
     }
     virtual void translate(std::ostream &dst,TranslateContext&context) const
     {
-        cerr<<"in ListDeclaration"<<endl;
+        // cout<<"in ListDeclaration"<<endl;
         node1->translate(dst,context);
         node2->translate(dst,context);
     }
@@ -174,7 +174,7 @@ public:
     }
     virtual void translate(std::ostream &dst,TranslateContext&context) const
     {
-        cerr<<"in StatementSequence"<<endl;
+        // cout<<"in StatementSequence"<<endl;
         node1->translate(dst,context);
         node2->translate(dst,context);
     }
@@ -211,7 +211,7 @@ public:
     {
         if(node)
         {
-            cerr<<"in ExprStatement"<<endl;
+            // cout<<"in ExprStatement"<<endl;
             context.indent_output(dst);
             node->translate(dst,context);
             dst<<endl;
@@ -272,7 +272,7 @@ public:
     }
     virtual void translate(std::ostream &dst,TranslateContext&context) const
     {
-        cerr<<"in SelectionStatement"<<endl;
+        // cout<<"in SelectionStatement"<<endl;
         /*
             if(node1):
                 node2
@@ -385,7 +385,7 @@ public:
 
     virtual void translate(std::ostream &dst,TranslateContext&context) const
     {
-        cerr<<"in IterationStatement"<<endl;
+        // cout<<"in IterationStatement"<<endl;
         if(type == "while")
         {
             /*
@@ -476,7 +476,7 @@ public:
     }
     virtual void translate(std::ostream &dst,TranslateContext&context) const
     {
-        cerr<<"in JumpStatement"<<endl;
+        // cout<<"in JumpStatement"<<endl;
         if(type == "goto")
         {
             throw std::runtime_error("Not implemented.");
@@ -488,8 +488,8 @@ public:
         }
         if(type == "return")
         {
-            cerr<<"in return "<<endl;
-            cerr<<"indent:"<<context.get_indent()<<endl;
+            // cout<<"in return "<<endl;
+            // cout<<"indent:"<<context.get_indent()<<endl;
             context.indent_output(dst);
             dst<<type<<" ";
             node1->translate(dst,context);

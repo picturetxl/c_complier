@@ -12,20 +12,39 @@ using namespace std;
 class TranslateContext
 {
 private:
-    vector<string> globalVar;//global value
     int indent;              //缩进
     bool in_arglist;         //如果在参数列表中,那么类型全部为空
     bool function_inside;    //如果在函数里面,类型也为空,且要考虑全局的变量
     bool main_func_exist;   //Whether the main function exists
-    bool is_declareation;   //是不是声明 如果是int x; 这种 直接去掉
+    // bool is_declareation;   //是不是声明 如果是int x; 这种 直接去掉
 public:
+    vector<string> globalVar;//global value
+    bool global=false;
+    bool local = false;
+    bool return_type = false;
+    bool arglist = false;
     //初始化
     TranslateContext()
     {
         this->in_arglist=false;
         this->indent = 0;
         this->main_func_exist = false;
+        // this->is_declareation = false;
     }
+    // bool get_declaration_flag()
+    // {
+    //     return is_declareation;
+    // }
+    // void turn_on_in_declaration_flag()
+    // {
+    //     is_declareation= true;
+    // }
+    // void shutdown_in_declaration_flag()
+    // {
+    //     is_declareation = false;
+    // } 
+
+
     //获取是否在参数列表中
     bool get_arglist_flag()
     {

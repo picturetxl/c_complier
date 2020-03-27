@@ -56,7 +56,7 @@ public:
     }
     virtual void translate(std::ostream &dst,TranslateContext & context) const
     {
-        cerr<<"in program"<<endl;
+        // cout<<"in program"<<endl;
         // dst<<endl;
         next->translate(dst,context);
         dst<<endl;
@@ -100,28 +100,45 @@ public:
     }
     virtual void translate(std::ostream &dst,TranslateContext & context) const
     {
-        cerr<<"in Function"<<endl;
-
-      
+        // cout<<"in Function"<<endl;
         if(node3)
         {//在函数里面了
+            // cout<<"in 3"<<endl;
+            context.global=false;
+           
+            context.return_type = true;
             node1->translate(dst,context);
+            context.return_type=false;
+            context.arglist = true;
             node2->translate(dst,context);
+            context.arglist = false;
             context.turn_on_function_flag();//在函数里
             context.clear_indent();
             context.increase_indent();
+            for(auto g:context.globalVar)
+            {
+                dst<<endl;
+                context.indent_output(dst);
+                dst<<"global "<<g<<endl;
+            }
+            context.local = true;
             node3->translate(dst,context);  
             context.decrease_indent();
+            context.local = false;
             context.shutdown_function_flag();//不在函数
         }
         else
         {
-            cerr<<"in globar"<<endl;
+            // cout<<"in 2"<<endl;
+            context.global=true;
             context.turn_on_function_flag();//在函数里
+            // context.turn_on_in_declaration_flag();
             node1->translate(dst,context);
             node2->translate(dst,context);
             dst<<"=0";
             dst<<endl;
+            context.global=false;
+            // context.shutdown_in_declaration_flag();
             context.shutdown_function_flag();//不在函数
         }
         
