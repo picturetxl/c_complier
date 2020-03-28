@@ -1,4 +1,4 @@
-	.file	1 "declare_global.c"
+	.file	1 "add.c"
 	.section .mdebug.abi32
 	.previous
 	.nan	legacy
@@ -6,8 +6,6 @@
 	.module	nooddspreg
 	.abicalls
 	.text
-
-	.comm	x,32,4
 	.align	2
 	.globl	f
 	.set	nomips16
@@ -23,7 +21,11 @@ f:
 	addiu	$sp,$sp,-8
 	sw	$fp,4($sp)
 	move	$fp,$sp
-	li	$2,11			# 0xb
+	swc1	$f12,8($fp)
+	swc1	$f14,12($fp)
+	lwc1	$f2,8($fp)
+	lwc1	$f0,12($fp)
+	add.s	$f0,$f2,$f0
 	move	$sp,$fp
 	lw	$fp,4($sp)
 	addiu	$sp,$sp,8
